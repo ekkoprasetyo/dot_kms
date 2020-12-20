@@ -1,0 +1,2 @@
+<button type="button" onclick="editModal('{{ $train->c_train_id }}','{{ route('forum') }}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $train->c_train_id }}','{{ route('train.delete') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>

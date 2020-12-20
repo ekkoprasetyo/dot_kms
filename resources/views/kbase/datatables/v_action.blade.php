@@ -1,0 +1,2 @@
+<button type="button" onclick="editModal('{{ $trainset->c_trainset_id }}','{{ route('trainset.edit') }}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $trainset->c_trainset_id }}','{{ route('kbase') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
