@@ -113,7 +113,7 @@
 
     $(function () {
         $('#btn-signin').click(function () {
-            var passphrase = '4rm41nt3n4nc35y5t3m';
+            var passphrase = 'dot-kms';
             var passw = document.getElementById('password').value;
             document.getElementById('password').value = CryptoJS.AES.encrypt(JSON.stringify(passw), passphrase, {format: CryptoJSAesJson}).toString();
             return true;

@@ -26,13 +26,6 @@ class ForumController extends Controller
         return view('forum.v_index', compact('title','subtitle'));
     }
 
-    public function comment(){
-        $title = $this->title;
-        $subtitle = "Comment";
-
-        return view('forum.v_comment', compact('title','subtitle'));
-    }
-
     public function datatables(){
         $forum = ForumModel::datatables();
 
@@ -53,6 +46,13 @@ class ForumController extends Controller
             'title' => 'Fetch Data Success',
             'message' => 'Add Forum',
             'data' => view('forum.v_add_js')->render()]);
+    }
+
+    public function comment(){
+        return response()->json(['status' => 'success',
+            'title' => 'Fetch Data Success',
+            'message' => 'Comments',
+            'data' => view('forum.v_comment_js')->render()]);
     }
 
     public function store(ForumRequest $request){

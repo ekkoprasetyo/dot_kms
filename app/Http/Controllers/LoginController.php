@@ -22,7 +22,7 @@ class LoginController extends Controller
 
     public function validateLogin(LoginRequest $request){
         $cred = $request->txt_cred;
-        $decryptedPassword = $this->cryptoJsAesDecrypt('4rm41nt3n4nc35y5t3m', $request->txt_password);
+        $decryptedPassword = $this->cryptoJsAesDecrypt('dot-kms', $request->txt_password);
 
         $userdata = UsersModel::loginCred($cred);
 
@@ -49,7 +49,6 @@ class LoginController extends Controller
                     Session::put('users_nip',$userdata->c_users_nip);
                     Session::put('users_fullname',$userdata->c_users_fullname);
                     Session::put('users_email',$userdata->c_users_email);
-                    Session::put('users_position',$userdata->c_position_name);
                     Session::put('users_status',$userdata->c_users_status == 1 ? 'Active' : 'Inactive');
                     Session::put('users_role',$userdata->c_role_display);
                     Session::put('users_last_login_ip',$userdata->c_users_last_login_ip);

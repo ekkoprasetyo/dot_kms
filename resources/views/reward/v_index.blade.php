@@ -51,14 +51,14 @@
                                         <th>Tag</th>
                                         <th>Case</th>
                                         <th>Receiver</th>
-                                        <th>Publish Receive</th>
+                                        <th>Publish Date</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Mouth</td>
+                                        <td><small class="badge badge-info"></i>Mouth</small></td>
                                         <td>Jika mulut kemasukan sesuatu</td>
                                         <td>Prisilia Nasution</td>
                                         <td>9 December 2020</td>
@@ -69,7 +69,7 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Foot</td>
+                                        <td><small class="badge badge-info"></i>Foot</small></td>
                                         <td>Jika kaki tertindih oleh sesuatu</td>
                                         <td>Ayu Tong Tong</td>
                                         <td>7 December 2020</td>
@@ -85,7 +85,7 @@
                                         <th>Tag</th>
                                         <th>Case</th>
                                         <th>Receiver</th>
-                                        <th>Publish Receive</th>
+                                        <th>Publish Date</th>
                                         <th>Action</th>
                                     </tr>
                                     </tfoot>

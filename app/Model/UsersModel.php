@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UsersModel extends Model
 {
-    protected $table = "t_arms_users";
+    protected $table = "t_kms_users";
     protected $primaryKey = 'c_users_id';
     protected $hidden = ['c_users_password'];
     protected $fillable = [
@@ -28,21 +28,19 @@ class UsersModel extends Model
 
         if ($field_dred == 'email') {
             return UsersModel::where('c_users_email', $cred)
-                ->leftJoin('t_arms_role', 't_arms_users.c_users_role', '=', 't_arms_role.c_role_id' )
-                ->leftJoin('t_arms_position', 't_arms_users.c_users_position', '=', 't_arms_position.c_position_id' )
+                ->leftJoin('t_kms_role', 't_kms_users.c_users_role', '=', 't_kms_role.c_role_id' )
                 ->first();
         }
         else if ($field_dred == 'nip') {
             return UsersModel::where('c_users_nip', $cred)
-                ->leftJoin('t_arms_role', 't_arms_users.c_users_role', '=', 't_arms_role.c_role_id' )
-                ->leftJoin('t_arms_position', 't_arms_users.c_users_position', '=', 't_arms_position.c_position_id' )
+                ->leftJoin('t_kms_role', 't_kms_users.c_users_role', '=', 't_kms_role.c_role_id' )
                 ->first();
         }
     }
 
     public static function datatables(){
         return UsersModel::select('*')
-            ->leftJoin('t_arms_role', 't_arms_users.c_users_role', '=', 't_arms_role.c_role_id' )
+            ->leftJoin('t_kms_role', 't_kms_users.c_users_role', '=', 't_kms_role.c_role_id' )
             ->where('c_users_softdelete', 0)
             ->get();
     }
@@ -54,11 +52,7 @@ class UsersModel extends Model
 
     public static function detailUser($username){
         return UsersModel::where('c_users_id', $username)
-            ->leftJoin('t_arms_role', 't_arms_users.c_users_role', '=', 't_arms_role.c_role_id' )
-            ->leftJoin('t_arms_position', 't_arms_users.c_users_position', '=', 't_arms_position.c_position_id' )
-            ->leftJoin('t_arms_position_level', 't_arms_position.c_position_position_level', '=', 't_arms_position_level.c_position_level_id' )
-            ->leftJoin('t_arms_unit', 't_arms_position.c_position_unit', '=', 't_arms_unit.c_unit_id' )
-            ->leftJoin('t_arms_directorate', 't_arms_unit.c_unit_directorate', '=', 't_arms_directorate.c_directorate_id' )
+            ->leftJoin('t_kms_role', 't_kms_users.c_users_role', '=', 't_kms_role.c_role_id' )
             ->first();
     }
 

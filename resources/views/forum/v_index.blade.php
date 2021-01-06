@@ -34,17 +34,21 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <a type="button" onclick="addModal('{{ route('forum.add') }}')" class="btn btn-app">
+                        <span class="badge bg-info">Insert</span>
+                        <i class="fa fa-plus"></i> Add
+                    </a>
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header p-2">
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Recently Published</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Closed Thread</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="#open-thread" data-toggle="tab">Open Thread</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#closed-thread" data-toggle="tab">Closed Thread</a></li>
                                 </ul>
                             </div><!-- /.card-header -->
                             <div class="card-body">
                                 <div class="tab-content">
-                                    <div class="active tab-pane" id="activity">
+                                    <div class="active tab-pane" id="open-thread">
                                         <!-- Post -->
                                         <div class="post">
                                             <div class="user-block">
@@ -56,16 +60,41 @@
                                             </div>
                                             <!-- /.user-block -->
                                             <p>
-                                                Bagaimana cara ampuh menyembuhkan koreng akibat kecelakaan kerja ya ?
+                                                Kaki keseleo sebaiknya diberikan penangan apa ?
                                             </p>
 
                                             <p>
-                                                <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                                                <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
+                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
+
                                                 <span class="float-right">
-                                                  <a href="#" class="link-black text-sm">
-                                                    <i class="far fa-comments mr-1"></i> Comments (1)
-                                                  </a>
+                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (7)</button>
+                                                </span>
+                                            </p>
+
+                                        </div>
+                                        <!-- /.post -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+                                    <div class="tab-pane" id="closed-thread">
+                                        <!-- Post -->
+                                        <div class="post">
+                                            <div class="user-block">
+                                                <img class="img-circle img-bordered-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="user image">
+                                                <span class="username">
+                                                  <a href="#">Roy Suryo</a>
+                                                </span>
+                                                <span class="description">RS. Sehat Selalu - 7:30 PM today</span>
+                                            </div>
+                                            <!-- /.user-block -->
+                                            <p>
+                                                Bagaimana jika mulut kemasukan benda asing ?
+                                            </p>
+
+                                            <p>
+                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
+
+                                                <span class="float-right">
+                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (3)</button>
                                                 </span>
                                             </p>
                                         </div>
@@ -81,140 +110,18 @@
                                             </div>
                                             <!-- /.user-block -->
                                             <p>
-                                                Langkah pertama yang harus dilakukan apabila ada yang terpeleset itu apa ya ?
+                                                Bagaimana jika kaki tertimpa sesuatu yang berat ?
                                             </p>
 
                                             <p>
-                                                <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                                                <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
+                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
+
                                                 <span class="float-right">
-                                                  <a href="#" class="link-black text-sm">
-                                                    <i class="far fa-comments mr-1"></i> Comments (7)
-                                                  </a>
+                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (10)</button>
                                                 </span>
                                             </p>
                                         </div>
                                         <!-- /.post -->
-
-                                        <div class="post">
-                                            <div class="user-block">
-                                                <img class="img-circle img-bordered-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="user image">
-                                                <span class="username">
-                                                  <a href="#">John Thor</a>
-                                                </span>
-                                                <span class="description">RS. Sari Bugar - 3:33 PM today</span>
-                                            </div>
-                                            <!-- /.user-block -->
-                                            <p>
-                                                Jika tertusuk paku apakah akan tetanus ?
-                                            </p>
-
-                                            <p>
-                                                <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                                                <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
-                                                <span class="float-right">
-                                                  <a href="#" class="link-black text-sm">
-                                                    <i class="far fa-comments mr-1"></i> Comments (69)
-                                                  </a>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <!-- /.post -->
-                                    </div>
-                                    <!-- /.tab-pane -->
-                                    <div class="tab-pane" id="timeline">
-                                        <!-- The timeline -->
-                                        <div class="timeline timeline-inverse">
-                                            <!-- timeline time label -->
-                                            <div class="time-label">
-                                                <span class="bg-danger">
-                                                  10 Feb. 2014
-                                                </span>
-                                            </div>
-                                            <!-- /.timeline-label -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-envelope bg-primary"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 12:05</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                                                    <div class="timeline-body">
-                                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                                                        quora plaxo ideeli hulu weebly balihoo...
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                                                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-user bg-info"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
-
-                                                    <h3 class="timeline-header border-0"><a href="#">Sarah Young</a> accepted your friend request
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-comments bg-warning"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                                                    <div class="timeline-body">
-                                                        Take me to your leader!
-                                                        Switzerland is small and neutral!
-                                                        We are more like Germany, ambitious and misunderstood!
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <!-- timeline time label -->
-                                            <div class="time-label">
-                                                <span class="bg-success">
-                                                  3 Jan. 2014
-                                                </span>
-                                            </div>
-                                            <!-- /.timeline-label -->
-                                            <!-- timeline item -->
-                                            <div>
-                                                <i class="fas fa-camera bg-purple"></i>
-
-                                                <div class="timeline-item">
-                                                    <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
-
-                                                    <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                                                    <div class="timeline-body">
-                                                        <img src="http://placehold.it/150x100" alt="...">
-                                                        <img src="http://placehold.it/150x100" alt="...">
-                                                        <img src="http://placehold.it/150x100" alt="...">
-                                                        <img src="http://placehold.it/150x100" alt="...">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END timeline item -->
-                                            <div>
-                                                <i class="far fa-clock bg-gray"></i>
-                                            </div>
-                                        </div>
                                     </div>
                                     <!-- /.tab-pane -->
                                 </div>
@@ -244,7 +151,7 @@
                 </div>
                 <form class="form-horizontal" method="post" action="{{ route('forum.store') }}" id="form-add">
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Train</h4>
+                        <h4 class="modal-title">Add Forum Thread</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -263,6 +170,33 @@
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal add -->
+
+    <!-- modal comment -->
+    <div class="modal fade" id="modal-comment">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div id="overlay-comment" hidden="hidden">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                        <i class="fas fa-2x fa-sync fa-spin"></i>
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Show Comment</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-comment">
+                    <div class="modal-body">
+                        <div id="form-comment-js"></div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal comment -->
 
     <!-- modal edit -->
     <div class="modal fade" id="modal-edit">
@@ -348,6 +282,85 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+        function showComment(url_comment) {
+            $("#form-comment-js").html('');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : url_comment,
+                type : 'POST',
+                beforeSend : function () {
+                    // comment overlay
+                    $("#overlay-comment").removeAttr("hidden");
+                },
+                success : function(data) {
+                    setTimeout(function(){
+                        // Button loading reset
+                        var obj = jQuery.parseJSON(JSON.stringify(data));
+                        if (obj.status == 'error' || obj.status == 'errors') {
+                            $(document).Toasts('create', {
+                                class: 'bg-danger',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-comment").attr("hidden",true);
+                        }
+                        else if (obj.status == 'auth') {
+                            $(document).Toasts('create', {
+                                class: 'bg-warning',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-comment").attr("hidden",true);
+                            $('#modal-comment').modal('hide');
+                        }
+                        else {
+                            $(document).Toasts('create', {
+                                class: 'bg-success',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-comment").attr("hidden",true);
+                            $("#form-comment-js").html(data.data);
+                        }
+                    }, 500);
+                },
+                error: function(xhr) {
+                    var xhr = JSON.parse(xhr.responseText);
+                    var html = '';
+                    for (var key in xhr.errors)
+                    {
+                        html += '<li>'+ xhr.errors[key][0] + '</li>'
+                    }
+                    $(document).Toasts('create', {
+                        class: 'bg-danger',
+                        title: xhr.message,
+                        position: 'bottomRight',
+                        body: html,
+                        icon: 'fas fa-envelope fa-lg',
+                        autohide: true,
+                        delay: 10000,
+                    });
+                    $("#overlay-comment").attr("hidden",true);
+                    $('#modal-comment').modal('hide');
+                }
+            });
+            $('#modal-comment').modal('show');
+        }
 
         $(function() {
             var table = $('.data-tables').DataTable({

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoleModel extends Model
 {
-    protected $table = "t_arms_role";
+    protected $table = "t_kms_role";
     protected $primaryKey = 'c_role_id';
     protected $fillable = [
         'c_role_name',
