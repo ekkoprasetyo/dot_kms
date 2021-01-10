@@ -37,12 +37,6 @@ class RewardController extends Controller
         $reward = RewardModel::datatables();
 
         return DataTables::of($reward)
-            ->addColumn('action', function($reward) {
-                return view('reward.datatables.v_action', ['reward' => $reward]);
-            })
-            ->editColumn('c_rewardset_code', function($reward) {
-                return !empty($reward->c_rewardset_code) ? $reward->c_rewardset_code : 'Not Member';
-            })
             ->addIndexColumn()
             ->escapeColumns([])
             ->make(true);

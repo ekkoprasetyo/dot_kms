@@ -28,3 +28,19 @@
         </li>
     </ul>
 </li>
+<li class="nav-item">
+    <a href="{{ route('branch') }}" class="nav-link {{ str_is('branch*', Route::currentRouteName()) ? 'active' : '' }}">
+        <i class="nav-icon fas fa-hospital"></i>
+        <p>
+            Branch
+        </p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{ route('position') }}" class="nav-link {{ str_is('position*', Route::currentRouteName()) ? 'active' : '' }}">
+        <i class="nav-icon fas fa-hospital"></i>
+        <p>
+            Position
+        </p>
+    </a>
+</li>

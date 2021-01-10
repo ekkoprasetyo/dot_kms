@@ -7,6 +7,8 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+    <!-- summernote -->
+    <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/summernote/summernote-bs4.css') }}">
 @endsection
 
 @section('content')
@@ -40,93 +42,7 @@
                     </a>
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header p-2">
-                                <ul class="nav nav-pills">
-                                    <li class="nav-item"><a class="nav-link active" href="#open-thread" data-toggle="tab">Open Thread</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#closed-thread" data-toggle="tab">Closed Thread</a></li>
-                                </ul>
-                            </div><!-- /.card-header -->
-                            <div class="card-body">
-                                <div class="tab-content">
-                                    <div class="active tab-pane" id="open-thread">
-                                        <!-- Post -->
-                                        <div class="post">
-                                            <div class="user-block">
-                                                <img class="img-circle img-bordered-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="user image">
-                                                <span class="username">
-                                                  <a href="#">Roy Suryo</a>
-                                                </span>
-                                                <span class="description">RS. Sehat Selalu - 7:30 PM today</span>
-                                            </div>
-                                            <!-- /.user-block -->
-                                            <p>
-                                                Kaki keseleo sebaiknya diberikan penangan apa ?
-                                            </p>
-
-                                            <p>
-                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
-
-                                                <span class="float-right">
-                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (7)</button>
-                                                </span>
-                                            </p>
-
-                                        </div>
-                                        <!-- /.post -->
-                                    </div>
-                                    <!-- /.tab-pane -->
-                                    <div class="tab-pane" id="closed-thread">
-                                        <!-- Post -->
-                                        <div class="post">
-                                            <div class="user-block">
-                                                <img class="img-circle img-bordered-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="user image">
-                                                <span class="username">
-                                                  <a href="#">Roy Suryo</a>
-                                                </span>
-                                                <span class="description">RS. Sehat Selalu - 7:30 PM today</span>
-                                            </div>
-                                            <!-- /.user-block -->
-                                            <p>
-                                                Bagaimana jika mulut kemasukan benda asing ?
-                                            </p>
-
-                                            <p>
-                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
-
-                                                <span class="float-right">
-                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (3)</button>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <!-- /.post -->
-
-                                        <div class="post">
-                                            <div class="user-block">
-                                                <img class="img-circle img-bordered-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="user image">
-                                                <span class="username">
-                                                  <a href="#">Anita Hara</a>
-                                                </span>
-                                                <span class="description">RS. Sari Sehat - 5:13 PM today</span>
-                                            </div>
-                                            <!-- /.user-block -->
-                                            <p>
-                                                Bagaimana jika kaki tertimpa sesuatu yang berat ?
-                                            </p>
-
-                                            <p>
-                                                <a class="link-black text-sm mr-2"><i class="fas fa-arrow-alt-circle-right"></i></a>
-
-                                                <span class="float-right">
-                                                    <button type="button" onclick="showComment('{{ route('forum.comment') }}')" class="btn btn-info btn-sm text-sm"> <i class="far fa-comments mr-1"></i> Comments (10)</button>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <!-- /.post -->
-                                    </div>
-                                    <!-- /.tab-pane -->
-                                </div>
-                                <!-- /.tab-content -->
-                            </div><!-- /.card-body -->
+                            <div id="content-forum"></div>
                         </div>
                         <!-- /.nav-tabs-custom -->
                     </div>
@@ -171,33 +87,6 @@
     </div>
     <!-- /.modal add -->
 
-    <!-- modal comment -->
-    <div class="modal fade" id="modal-comment">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div id="overlay-comment" hidden="hidden">
-                    <div class="overlay d-flex justify-content-center align-items-center">
-                        <i class="fas fa-2x fa-sync fa-spin"></i>
-                    </div>
-                </div>
-                <div class="modal-header">
-                    <h4 class="modal-title">Show Comment</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-comment">
-                    <div class="modal-body">
-                        <div id="form-comment-js"></div>
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal comment -->
-
     <!-- modal edit -->
     <div class="modal fade" id="modal-edit">
         <div class="modal-dialog modal-lg">
@@ -208,12 +97,12 @@
                     </div>
                 </div>
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Train</h4>
+                    <h4 class="modal-title">Edit Forum</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-edit">
+                <form class="form-horizontal" method="post" action="{{ route('forum.update') }}" id="form-edit">
                     <div class="modal-body">
                         <div id="form-edit-js"></div>
                     </div>
@@ -229,6 +118,68 @@
     </div>
     <!-- /.modal edit -->
 
+    <!-- modal comment -->
+    <div class="modal fade" id="modal-comment">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div id="overlay-comment" hidden="hidden">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                        <i class="fas fa-2x fa-sync fa-spin"></i>
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Show Comment</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="form-horizontal" method="post" action="{{ route('forum.store-comment') }}" id="form-comment">
+                    <div class="modal-body">
+                        <div id="form-comment-js"></div>
+                    </div>
+                    <div class="modal-footer justify-content-between" hidden>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" id="btn-comment-add">Save !</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal comment -->
+
+    <!-- modal close thread -->
+    <div class="modal fade" id="modal-close-thread">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div id="overlay-close-thread" hidden="hidden">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                        <i class="fas fa-2x fa-sync fa-spin"></i>
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Close Thread</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="form-horizontal" method="post" action="{{ route('kbase.store-forum') }}" id="form-close-thread">
+                    <div class="modal-body">
+                        <div id="form-close-thread-js"></div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" id="btn-submit-add">Save !</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal close thread -->
+
     <!-- modal delete -->
     <div class="modal fade" id="modal-delete">
         <div class="modal-dialog modal-lg">
@@ -239,12 +190,12 @@
                     </div>
                 </div>
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Train</h4>
+                    <h4 class="modal-title">Delete Forum</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-delete">
+                <form class="form-horizontal" method="post" action="{{ route('forum.destroy') }}" id="form-delete">
                     <div class="modal-body">
                         <div id="form-delete-js"></div>
                     </div>
@@ -269,6 +220,8 @@
     <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
     <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <!-- Summernote -->
+    <script src="{{ URL::asset('theme/adminlte305/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- Toastr -->
     <script src="{{ URL::asset('theme/adminlte305/plugins/toastr/toastr.min.js') }}"></script>
     <!-- Custom -->
@@ -277,13 +230,89 @@
     <script src="{{ URL::asset('js/custom/delete.js') }}"></script>
 
     <script type="text/javascript">
+        $(function () {
+            loadContent();
+
+            setInterval(function(){
+                loadContent();
+                }, 60000);
+        });
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
 
-        function showComment(url_comment) {
+        function loadContent() {
+            $("#form-comment-js").html('');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url : '{{ route('forum.content') }}',
+                type : 'POST',
+                success : function(data) {
+                    setTimeout(function(){
+                        // Button loading reset
+                        var obj = jQuery.parseJSON(JSON.stringify(data));
+                        if (obj.status == 'error' || obj.status == 'errors') {
+                            $(document).Toasts('create', {
+                                class: 'bg-danger',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                        }
+                        else if (obj.status == 'auth') {
+                            $(document).Toasts('create', {
+                                class: 'bg-warning',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                        }
+                        else {
+                            $(document).Toasts('create', {
+                                class: 'bg-success',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#content-forum").html(data.data);
+                        }
+                    }, 500);
+                },
+                error: function(xhr) {
+                    var xhr = JSON.parse(xhr.responseText);
+                    var html = '';
+                    for (var key in xhr.errors)
+                    {
+                        html += '<li>'+ xhr.errors[key][0] + '</li>'
+                    }
+                    $(document).Toasts('create', {
+                        class: 'bg-danger',
+                        title: xhr.message,
+                        position: 'bottomRight',
+                        body: html,
+                        icon: 'fas fa-envelope fa-lg',
+                        autohide: true,
+                        delay: 10000,
+                    });
+                }
+            });
+        }
+
+        function showComment(forum_id, url_comment) {
             $("#form-comment-js").html('');
             $.ajax({
                 headers: {
@@ -291,6 +320,9 @@
                 },
                 url : url_comment,
                 type : 'POST',
+                data: {
+                    forum_id: forum_id,
+                },
                 beforeSend : function () {
                     // comment overlay
                     $("#overlay-comment").removeAttr("hidden");
@@ -362,27 +394,86 @@
             $('#modal-comment').modal('show');
         }
 
-        $(function() {
-            var table = $('.data-tables').DataTable({
-                "responsive": true,
-                "autoWidth": false,
-                "info": true,
-                "paging": true,
-                "scrollX": true,
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '{{ route('forum') }}',
-                    method: 'POST'
+        function closeThread(forum_id, url_close) {
+            $("#form-close-thread-js").html('');
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-                columns: [
-                    {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
-                    {data: 'c_forum_number', name: 'c_forum_number', "className": "text-center"},
-                    {data: 'c_forum_name', name: 'c_forum_name', "className": "text-center"},
-                    {data: 'c_forumset_code', name: 'c_forumset_code', "className": "text-center"},
-                    {data: 'action', name: 'action', orderable: false, searchable: false, "className": "text-center", width: '150px'}
-                ],
+                url : url_close,
+                type : 'POST',
+                data: {
+                    forum_id: forum_id,
+                },
+                beforeSend : function () {
+                    // close-thread overlay
+                    $("#overlay-close-thread").removeAttr("hidden");
+                },
+                success : function(data) {
+                    setTimeout(function(){
+                        // Button loading reset
+                        var obj = jQuery.parseJSON(JSON.stringify(data));
+                        if (obj.status == 'error' || obj.status == 'errors') {
+                            $(document).Toasts('create', {
+                                class: 'bg-danger',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-close-thread").attr("hidden",true);
+                        }
+                        else if (obj.status == 'auth') {
+                            $(document).Toasts('create', {
+                                class: 'bg-warning',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-close-thread").attr("hidden",true);
+                            $('#modal-close-thread').modal('hide');
+                        }
+                        else {
+                            $(document).Toasts('create', {
+                                class: 'bg-success',
+                                title: obj.title,
+                                position: 'bottomRight',
+                                body: obj.message,
+                                icon: 'fas fa-envelope fa-lg',
+                                autohide: true,
+                                delay: 3000,
+                            });
+                            $("#overlay-close-thread").attr("hidden",true);
+                            $("#form-close-thread-js").html(data.data);
+                        }
+                    }, 500);
+                },
+                error: function(xhr) {
+                    var xhr = JSON.parse(xhr.responseText);
+                    var html = '';
+                    for (var key in xhr.errors)
+                    {
+                        html += '<li>'+ xhr.errors[key][0] + '</li>'
+                    }
+                    $(document).Toasts('create', {
+                        class: 'bg-danger',
+                        title: xhr.message,
+                        position: 'bottomRight',
+                        body: html,
+                        icon: 'fas fa-envelope fa-lg',
+                        autohide: true,
+                        delay: 10000,
+                    });
+                    $("#overlay-close-thread").attr("hidden",true);
+                    $('#modal-close-thread').modal('hide');
+                }
             });
-        });
+            $('#modal-close-thread').modal('show');
+        }
     </script>
 @endsection

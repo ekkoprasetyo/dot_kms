@@ -15,7 +15,7 @@
     <div class="form-group row">
         <label class="col-sm-3 col-form-label">E-Mail</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="eko.prasetyo@railink.co.id" name="txt_users_email">
+            <input type="text" class="form-control" placeholder="ekkoprasetyo@gmail.com" name="txt_users_email">
         </div>
     </div>
     <div class="form-group row">

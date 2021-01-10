@@ -126,7 +126,7 @@ $("#form-delete").on("submit", function (event) {
                     $('#modal-delete').modal('hide');
                 } else {
                     $(document).Toasts('create', {
-                        class: 'bg-success',
+                        class: 'bg-warning',
                         title: obj.title,
                         position: 'bottomRight',
                         body: obj.message,
@@ -139,6 +139,7 @@ $("#form-delete").on("submit", function (event) {
                     var data_tables = $('.data-tables').DataTable();
                     data_tables
                         .draw();
+                    loadContent();
                 }
             }, 500);
         },
@@ -162,4 +163,10 @@ $("#form-delete").on("submit", function (event) {
             $('#modal-delete').modal('hide');
         }
     });
+});
+
+$("#modal-delete").on("hidden.bs.modal", function (event) {
+    event.preventDefault();
+    $("#form-delete-js").html('');
+    console.log('Clear content in modal ..')
 });

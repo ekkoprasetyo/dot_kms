@@ -138,6 +138,7 @@ $("#form-edit").on("submit", function (event) {
                     var data_tables = $('.data-tables').DataTable();
                     data_tables
                         .draw();
+                    loadContent();
                 }
             }, 500);
         },
@@ -160,4 +161,10 @@ $("#form-edit").on("submit", function (event) {
             $("#overlay-edit").attr("hidden",true);
         }
     });
+});
+
+$("#modal-edit").on("hidden.bs.modal", function (event) {
+    event.preventDefault();
+    $("#form-edit-js").html('');
+    console.log('Clear content in modal ..')
 });

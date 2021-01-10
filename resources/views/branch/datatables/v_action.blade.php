@@ -1,0 +1,2 @@
+<button type="button" onclick="editModal('{{ $branch->c_branch_id }}','{{route('branch.edit')}}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $branch->c_branch_id }}','{{route('branch.delete')}}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>

@@ -35,65 +35,37 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <!-- Box Comment -->
-                        <div class="card card-widget">
+                        <div class="card">
                             <div class="card-header">
-                                <div class="user-block">
-                                    <img class="img-circle" src="{{ URL::asset('theme/adminlte305/dist/img/user1-128x128.jpg') }}" alt="User Image">
-                                    <span class="username"><a href="#">Roy Suryo</a></span>
-                                    <span class="description">RS. Sehat Selalu - 7:30 PM Today</span>
-                                </div>
-                                <!-- /.user-block -->
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Mark as read">
-                                        <i class="far fa-circle"></i></button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
-                                    </button>
-                                </div>
-                                <!-- /.card-tools -->
+                                <a type="button" onclick="addModal('{{route('branch.add')}}')" class="btn btn-app">
+                                    <span class="badge bg-success">Insert</span>
+                                    <i class="fa fa-plus"></i> Add
+                                </a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <!-- post text -->
-                                <p>Bagaimana cara ampuh menyembuhkan koreng akibat kecelakaan kerja ya ?
-
-                                </p>
-
-                                <!-- Social sharing buttons -->
-                                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share</button>
-                                <button type="button" class="btn btn-default btn-sm"><i class="far fa-thumbs-up"></i> Like</button>
-                                <span class="float-right text-muted">69 likes - 1 comment(s)</span>
+                                <table class="table table-bordered table-striped data-tables">
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                             <!-- /.card-body -->
-                            <div class="card-footer card-comments">
-                                <div class="card-comment">
-                                    <!-- User image -->
-                                    <img class="img-circle img-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user3-128x128.jpg') }}" alt="User Image">
-
-                                    <div class="comment-text">
-                                        <span class="username">
-                                          Dukun Gonzales
-                                          <span class="text-muted float-right">8:03 PM Today</span>
-                                        </span><!-- /.username -->
-                                        Diberi sedikit bensin terus dikeruk ..
-                                    </div>
-                                    <!-- /.comment-text -->
-                                </div>
-                                <!-- /.card-comment -->
-                            </div>
-                            <!-- /.card-footer -->
-                            <div class="card-footer">
-                                <form action="#" method="post">
-                                    <img class="img-fluid img-circle img-sm" src="{{ URL::asset('theme/adminlte305/dist/img/user4-128x128.jpg') }}" alt="Alt Text">
-                                    <!-- .img-push is used to add margin to elements next to floating images -->
-                                    <div class="img-push">
-                                        <input type="text" class="form-control form-control-sm" placeholder="Press enter to post comment">
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- /.card-footer -->
                         </div>
                         <!-- /.card -->
                     </div>
@@ -116,9 +88,9 @@
                         <i class="fas fa-2x fa-sync fa-spin"></i>
                     </div>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum.store') }}" id="form-add">
+                <form class="form-horizontal" method="post" action="{{ route('branch.store') }}" id="form-add">
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Train</h4>
+                        <h4 class="modal-title">Add Branch</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -148,12 +120,12 @@
                     </div>
                 </div>
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Train</h4>
+                    <h4 class="modal-title">Edit Branch</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-edit">
+                <form class="form-horizontal" method="post" action="{{ route('branch.update') }}" id="form-edit">
                     <div class="modal-body">
                         <div id="form-edit-js"></div>
                     </div>
@@ -179,12 +151,12 @@
                     </div>
                 </div>
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Train</h4>
+                    <h4 class="modal-title">Delete Branch</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('forum') }}" id="form-delete">
+                <form class="form-horizontal" method="post" action="{{ route('branch.destroy') }}" id="form-delete">
                     <div class="modal-body">
                         <div id="form-delete-js"></div>
                     </div>
@@ -233,14 +205,13 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: '{{ route('forum') }}',
+                    url: '{{ route('branch.datatables') }}',
                     method: 'POST'
                 },
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
-                    {data: 'c_forum_number', name: 'c_forum_number', "className": "text-center"},
-                    {data: 'c_forum_name', name: 'c_forum_name', "className": "text-center"},
-                    {data: 'c_forumset_code', name: 'c_forumset_code', "className": "text-center"},
+                    {data: 'c_branch_code', name: 'c_branch_code', "className": "text-center"},
+                    {data: 'c_branch_name', name: 'c_branch_name', "className": "text-center"},
                     {data: 'action', name: 'action', orderable: false, searchable: false, "className": "text-center", width: '150px'}
                 ],
             });

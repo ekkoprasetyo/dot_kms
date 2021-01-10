@@ -1,37 +1,27 @@
 @csrf
 <div class="card-body">
     <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Code</label>
+        <label class="col-sm-3 col-form-label">Tags</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control is-warning" placeholder="TS1" name="txt_trainset_code">
+            <input type="text" class="form-control is-warning" name="txt_kbase_tags" placeholder="Tags">
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Name</label>
+        <label class="col-sm-3 col-form-label">Title</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Trainset 1" name="txt_trainset_name">
+            <input type="text" class="form-control is-warning" placeholder="Some Title .." name="txt_kbase_title">
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Trainset Member</label>
+        <label class="col-sm-3 col-form-label">Content</label>
         <div class="col-sm-9">
-            <div class="select2-danger">
-                <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" multiple="multiple" style="width: 100%;" data-placeholder="Select a Train Member" name="txt_trainset_member[]">
-                    @if($trains->count() > 0)
-                        @foreach($trains as $train)
-                            <option value="{{$train->c_train_id}}">{{$train->c_train_name}} - ( {{$train->c_train_number}} )</option>
-                        @endForeach
-                    @else
-                        <option value="">No Data</option>
-                    @endif
-                </select>
-            </div>
+            <textarea class="textarea" name="txt_kbase_content" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
         </div>
     </div>
 </div>
-<script>
-    $(function() {
-        //Initialize Select2 Elements
-        $('.select2').select2();
-    });
+<script type="text/javascript">
+    $(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
 </script>

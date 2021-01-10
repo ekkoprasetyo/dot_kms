@@ -32,21 +32,9 @@
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Level</label>
+        <label class="col-sm-3 col-form-label">Branch</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" value="{{ $user->c_position_level_name }}" readonly>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Unit</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" value="{{ $user->c_unit_name }} - {{ $user->c_unit_abbr }}" readonly>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 col-form-label">Directorate</label>
-        <div class="col-sm-9">
-            <input type="text" class="form-control" value="{{ $user->c_directorate_name }} - {{ $user->c_directorate_abbr }}" readonly>
+            <input type="text" class="form-control" value="{{ $user->c_branch_name }} - {{ $user->c_branch_code }}" readonly>
         </div>
     </div>
     <div class="form-group row">

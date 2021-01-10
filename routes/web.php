@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BranchController;
+use App\Http\Controllers\PositionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -9,6 +11,7 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\KbaseController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\RewardController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +34,7 @@ Route::get('/login/destroy', [LoginController::class, 'destroy'])->name('login.d
 Route::group(['middleware' => ['user.session']], function () {
 
     //Route Dashboard
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     //Route Home
     Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -77,17 +79,39 @@ Route::group(['middleware' => ['user.session']], function () {
         Route::post('/users/delete', [UsersController::class, 'delete'])->name('users.delete');
         Route::patch('/users/destroy', [UsersController::class, 'destroy'])->name('users.destroy');
 
+        //Route Branch
+        Route::get('/branch', [BranchController::class, 'index'])->name('branch');
+        Route::post('/branch/datatables',[BranchController::class, 'datatables'])->name('branch.datatables');//JSON Request
+        Route::post('/branch/add', [BranchController::class, 'add'])->name('branch.add');
+        Route::post('/branch/store', [BranchController::class, 'store'])->name('branch.store');
+        Route::post('/branch/edit', [BranchController::class, 'edit'])->name('branch.edit');
+        Route::patch('/branch/update', [BranchController::class, 'update'])->name('branch.update');
+        Route::post('/branch/delete', [BranchController::class, 'delete'])->name('branch.delete');
+        Route::patch('/branch/destroy', [BranchController::class, 'destroy'])->name('branch.destroy');
+
+        //Route Position
+        Route::get('/position', [PositionController::class, 'index'])->name('position');
+        Route::post('/position/add',[PositionController::class, 'add'])->name('position.add');
+        Route::post('/position/datatables',[PositionController::class, 'datatables'])->name('position.datatables');//JSON Request
+        Route::post('/position/store', [PositionController::class, 'store'])->name('position.store');
+        Route::post('/position/edit', [PositionController::class, 'edit'])->name('position.edit');
+        Route::patch('/position/update', [PositionController::class, 'update'])->name('position.update');
+        Route::post('/position/delete', [PositionController::class, 'delete'])->name('position.delete');
+        Route::patch('/position/destroy', [PositionController::class, 'destroy'])->name('position.destroy');
+
         //Route Forum
         Route::get('/forum', [ForumController::class, 'index'])->name('forum');
-        Route::get('/forum/comment', [ForumController::class, 'comment'])->name('forum.detail');
-        Route::post('/forum/datatables',[ForumController::class, 'datatables'])->name('forum.datatables');//JSON Request
+        Route::post('/forum/comment', [ForumController::class, 'comment'])->name('forum.detail');
+        Route::post('/forum/content',[ForumController::class, 'content'])->name('forum.content');//JSON Request
         Route::post('/forum/add', [ForumController::class, 'add'])->name('forum.add');
         Route::post('/forum/store', [ForumController::class, 'store'])->name('forum.store');
+        Route::post('/forum/store-comment', [ForumController::class, 'store_comment'])->name('forum.store-comment');
         Route::post('/forum/edit', [ForumController::class, 'edit'])->name('forum.edit');
         Route::patch('/forum/update', [ForumController::class, 'update'])->name('forum.update');
         Route::post('/forum/delete', [ForumController::class, 'delete'])->name('forum.delete');
         Route::patch('/forum/destroy', [ForumController::class, 'destroy'])->name('forum.destroy');
         Route::post('/forum/comment', [ForumController::class, 'comment'])->name('forum.comment');
+        Route::post('/forum/close-thread', [ForumController::class, 'close_thread'])->name('forum.close-thread');
 
         //Route Reward
         Route::get('/reward', [RewardController::class, 'index'])->name('reward');
@@ -103,8 +127,10 @@ Route::group(['middleware' => ['user.session']], function () {
         //Route Kbase
         Route::get('/kbase', [KbaseController::class, 'index'])->name('kbase');
         Route::post('/kbase/datatables',[KbaseController::class, 'datatables'])->name('kbase.datatables');//JSON Request
+        Route::post('/kbase/detail',[KbaseController::class, 'detail'])->name('kbase.detail');
         Route::post('/kbase/add', [KbaseController::class, 'add'])->name('kbase.add');
         Route::post('/kbase/store', [KbaseController::class, 'store'])->name('kbase.store');
+        Route::post('/kbase/store-forum', [KbaseController::class, 'store_forum'])->name('kbase.store-forum');
         Route::post('/kbase/edit', [KbaseController::class, 'edit'])->name('kbase.edit');
         Route::patch('/kbase/update', [KbaseController::class, 'update'])->name('kbase.update');
         Route::post('/kbase/delete', [KbaseController::class, 'delete'])->name('kbase.delete');

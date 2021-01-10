@@ -78,3 +78,9 @@ function detailModal(id,url_detail) {
     });
     $('#modal-detail').modal('show');
 }
+
+$("#modal-detail").on("hidden.bs.modal", function (event) {
+    event.preventDefault();
+    $("#form-detail-js").html('');
+    console.log('Clear content in modal ..')
+});

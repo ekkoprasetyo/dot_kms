@@ -7,6 +7,8 @@
 <!-- Select2 -->
 <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/select2/css/select2.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<!-- summernote -->
+<link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/summernote/summernote-bs4.css') }}">
 @endsection
 
 @section('content')
@@ -56,28 +58,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Head</td>
-                                        <td>Jika kepala tertiban sesuatu</td>
-                                        <td>Admin</td>
-                                        <td>12 December 2020</td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-sm"><i class="fas fa-search-plus"></i></button>
-                                            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-mail-bulk"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Mouth</td>
-                                        <td>Jika mulut kemasukkan sesuatu</td>
-                                        <td>Admin</td>
-                                        <td>11 December 2020</td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-sm"><i class="fas fa-search-plus"></i></button>
-                                            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-mail-bulk"></i></button>
-                                        </td>
-                                    </tr>
                                 </tbody>
                                 <tfoot>
                                 <tr>
@@ -107,7 +87,7 @@
 
 <!-- modal add -->
 <div class="modal fade" id="modal-add">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div id="overlay-add" hidden="hidden">
                 <div class="overlay d-flex justify-content-center align-items-center">
@@ -136,9 +116,37 @@
 </div>
 <!-- /.modal add -->
 
+<!-- modal detail -->
+<div class="modal fade" id="modal-detail">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div id="overlay-detail" hidden="hidden">
+                <div class="overlay d-flex justify-content-center align-items-center">
+                    <i class="fas fa-2x fa-sync fa-spin"></i>
+                </div>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title">Detail Knowledge Base</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="form-detail-js"></div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal detail -->
+
 <!-- modal edit -->
 <div class="modal fade" id="modal-edit">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div id="overlay-edit" hidden="hidden">
                 <div class="overlay d-flex justify-content-center align-items-center">
@@ -146,7 +154,7 @@
                 </div>
             </div>
             <div class="modal-header">
-                <h4 class="modal-title">Edit Kbase</h4>
+                <h4 class="modal-title">Edit Knowledge Base</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -177,7 +185,7 @@
                 </div>
             </div>
             <div class="modal-header">
-                <h4 class="modal-title">Delete Kbase</h4>
+                <h4 class="modal-title">Delete Knowledge Base</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -207,12 +215,15 @@
 <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<!-- Summernote -->
+<script src="{{ URL::asset('theme/adminlte305/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- Toastr -->
 <script src="{{ URL::asset('theme/adminlte305/plugins/toastr/toastr.min.js') }}"></script>
 <!-- Custom -->
 <script src="{{ URL::asset('js/custom/add.js') }}"></script>
 <script src="{{ URL::asset('js/custom/edit.js') }}"></script>
 <script src="{{ URL::asset('js/custom/delete.js') }}"></script>
+<script src="{{ URL::asset('js/custom/detail.js') }}"></script>
 
 <script type="text/javascript">
     $.ajaxSetup({
@@ -229,6 +240,19 @@
             "paging": true,
             "scrollX": true,
             processing: true,
+            serverSide: true,
+            ajax: {
+                url: '{{ route('kbase.datatables') }}',
+                method: 'POST'
+            },
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
+                {data: 'c_kbase_tags', name: 'c_kbase_tags', "className": "text-center"},
+                {data: 'c_kbase_title', name: 'c_kbase_title', "className": "text-center"},
+                {data: 'c_users_fullname', name: 'c_users_fullname', "className": "text-center"},
+                {data: 'c_kbase_update_time', name: 'c_kbase_update_time', "className": "text-center"},
+                {data: 'action', name: 'action', orderable: false, searchable: false, "className": "text-center", width: '150px'}
+            ],
         });
     });
 </script>

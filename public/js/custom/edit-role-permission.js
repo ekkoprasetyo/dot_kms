@@ -163,3 +163,9 @@ $("#form-permission").on("submit", function (event) {
         }
     });
 });
+
+$("#modal-permission").on("hidden.bs.modal", function (event) {
+    event.preventDefault();
+    $("#form-permission-js").html('');
+    console.log('Clear content in modal ..')
+});

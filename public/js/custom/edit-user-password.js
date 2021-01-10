@@ -163,3 +163,9 @@ $("#form-edit-password").on("submit", function (event) {
         }
     });
 });
+
+$("#modal-edit-password").on("hidden.bs.modal", function (event) {
+    event.preventDefault();
+    $("#form-edit-password-js").html('');
+    console.log('Clear content in modal ..')
+});

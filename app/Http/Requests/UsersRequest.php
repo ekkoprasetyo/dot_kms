@@ -27,20 +27,20 @@ class UsersRequest extends FormRequest
         switch(Route::currentRouteName()) {
             case 'users.store':
                 return [
-                    'txt_users_nip' => 'required|numeric|unique:t_arms_users,c_users_nip',
+                    'txt_users_nip' => 'required|numeric|unique:t_kms_users,c_users_nip',
                     'txt_users_fullname' => 'required',
-                    'txt_users_email' => 'required|email|unique:t_arms_users,c_users_email',
+                    'txt_users_email' => 'required|email|unique:t_kms_users,c_users_email',
                     'txt_users_password' => 'required|confirmed|min:6',
-                    'txt_users_position' => 'required|numeric||unique:t_arms_users,c_users_position',
+                    'txt_users_position' => 'required|numeric||unique:t_kms_users,c_users_position',
                     'txt_users_role' => 'required|numeric',
                     'txt_users_status' => 'required|numeric',
                 ];
             case 'users.update':
                 return [
-                    'txt_users_nip' => 'required|numeric|unique:t_arms_users,c_users_nip,'.$this->get('txt_users_id').',c_users_id',
+                    'txt_users_nip' => 'required|numeric|unique:t_kms_users,c_users_nip,'.$this->get('txt_users_id').',c_users_id',
                     'txt_users_fullname' => 'required',
-                    'txt_users_email' => 'required|email|unique:t_arms_users,c_users_email,'.$this->get('txt_users_id').',c_users_id',
-                    'txt_users_position' => 'required|numeric||unique:t_arms_users,c_users_position,'.$this->get('txt_users_id').',c_users_id',
+                    'txt_users_email' => 'required|email|unique:t_kms_users,c_users_email,'.$this->get('txt_users_id').',c_users_id',
+                    'txt_users_position' => 'required|numeric||unique:t_kms_users,c_users_position,'.$this->get('txt_users_id').',c_users_id',
                     'txt_users_role' => 'required|numeric',
                     'txt_users_status' => 'required|numeric',
                 ];

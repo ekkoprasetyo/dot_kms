@@ -48,45 +48,23 @@
                                     <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Tag</th>
-                                        <th>Case</th>
+                                        <th>Tags</th>
+                                        <th>Thread</th>
                                         <th>Receiver</th>
-                                        <th>Publish Date</th>
-                                        <th>Action</th>
+                                        <th>Point</th>
+                                        <th>Giver</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><small class="badge badge-info"></i>Mouth</small></td>
-                                        <td>Jika mulut kemasukan sesuatu</td>
-                                        <td>Prisilia Nasution</td>
-                                        <td>9 December 2020</td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-sm"><i class="fas fa-search-plus"></i></button>
-                                            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-mail-bulk"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><small class="badge badge-info"></i>Foot</small></td>
-                                        <td>Jika kaki tertindih oleh sesuatu</td>
-                                        <td>Ayu Tong Tong</td>
-                                        <td>7 December 2020</td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-sm"><i class="fas fa-search-plus"></i></button>
-                                            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-mail-bulk"></i></button>
-                                        </td>
-                                    </tr>
                                     </tbody>
                                     <tfoot>
                                     <tr>
                                         <th>No</th>
-                                        <th>Tag</th>
-                                        <th>Case</th>
+                                        <th>Tags</th>
+                                        <th>Thread</th>
                                         <th>Receiver</th>
-                                        <th>Publish Date</th>
-                                        <th>Action</th>
+                                        <th>Point</th>
+                                        <th>Giver</th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -104,99 +82,6 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
-    <!-- modal add -->
-    <div class="modal fade" id="modal-add">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div id="overlay-add" hidden="hidden">
-                    <div class="overlay d-flex justify-content-center align-items-center">
-                        <i class="fas fa-2x fa-sync fa-spin"></i>
-                    </div>
-                </div>
-                <form class="form-horizontal" method="post" action="{{ route('reward') }}" id="form-add">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add Knowledge Base</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div id="form-add-js"></div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success" id="btn-submit-add">Save !</button>
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal add -->
-
-    <!-- modal edit -->
-    <div class="modal fade" id="modal-edit">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div id="overlay-edit" hidden="hidden">
-                    <div class="overlay d-flex justify-content-center align-items-center">
-                        <i class="fas fa-2x fa-sync fa-spin"></i>
-                    </div>
-                </div>
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit Kbase</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="form-horizontal" method="post" action="{{ route('reward.update') }}" id="form-edit">
-                    <div class="modal-body">
-                        <div id="form-edit-js"></div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success" id="btn-submit-edit">Update !</button>
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal edit -->
-
-    <!-- modal delete -->
-    <div class="modal fade" id="modal-delete">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div id="overlay-delete" hidden="hidden">
-                    <div class="overlay d-flex justify-content-center align-items-center">
-                        <i class="fas fa-2x fa-sync fa-spin"></i>
-                    </div>
-                </div>
-                <div class="modal-header">
-                    <h4 class="modal-title">Delete Kbase</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form class="form-horizontal" method="post" action="{{ route('reward.destroy') }}" id="form-delete">
-                    <div class="modal-body">
-                        <div id="form-delete-js"></div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-danger" id="btn-submit-delete">Delete !</button>
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-    <!-- /.modal delete -->
 @endsection
 
 @section('app_js')
@@ -209,10 +94,6 @@
     <script src="{{ URL::asset('theme/adminlte305/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
     <!-- Toastr -->
     <script src="{{ URL::asset('theme/adminlte305/plugins/toastr/toastr.min.js') }}"></script>
-    <!-- Custom -->
-    <script src="{{ URL::asset('js/custom/add.js') }}"></script>
-    <script src="{{ URL::asset('js/custom/edit.js') }}"></script>
-    <script src="{{ URL::asset('js/custom/delete.js') }}"></script>
 
     <script type="text/javascript">
         $.ajaxSetup({
@@ -229,6 +110,19 @@
                 "paging": true,
                 "scrollX": true,
                 processing: true,
+                serverSide: true,
+                ajax: {
+                    url: '{{ route('reward.datatables') }}',
+                    method: 'POST'
+                },
+                columns: [
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
+                    {data: 'c_forum_tags', name: 'c_forum_tags', "className": "text-center"},
+                    {data: 'c_forum_issue', name: 'c_forum_issue', "className": "text-center"},
+                    {data: 'user_receiver', name: 'user_receiver', "className": "text-center"},
+                    {data: 'c_reward_point', name: 'c_reward_point', "className": "text-center"},
+                    {data: 'user_giver', name: 'user_giver', "className": "text-center"},
+                ],
             });
         });
     </script>

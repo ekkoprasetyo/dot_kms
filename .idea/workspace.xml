@@ -2,21 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee67eb5-8a9a-4958-a73c-03fed81ac140" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PositionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/BranchRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ForumRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/KbaseRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PositionRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/BranchModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/CommentModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/ForumModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/KbaseModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/PositionModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/RewardModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/v_index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/forum/v_close_thread_js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/forum/v_content_js.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/kbase/v_detail_js.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/PermissionModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/PermissionModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RoleModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RoleModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RolePermissionModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RolePermissionModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UsersModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/adminlte305/dist/img/photo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/theme/adminlte305/dist/img/photo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/browserconfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon/faviconit-instructions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/edit-role-permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit-role-permission.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/edit-user-password.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit-user-password.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/custom/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/datatables/v_action.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_comment.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/v_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/v_base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/v_base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/v_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/reward/v_comment.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/reward/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reward/v_index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/v_add_js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,32 +92,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="89" column="49" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+            <state relative-caret-position="48">
+              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
               <folding>
-                <element signature="e#7#44#0#PHP" expanded="true" />
+                <element signature="e#7#49#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ForumController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
-              <folding>
-                <element signature="e#40#53#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/reward/v_index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1305">
-              <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -65,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_base.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="338">
+              <caret line="33" column="106" lean-forward="true" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -75,13 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$item_checksheet</find>
-      <find>maintenance</find>
-      <find>Area</find>
-      <find>Mid</find>
-      <find>mid</find>
-      <find>Top</find>
-      <find>top</find>
       <find>area</find>
       <find>Position Level</find>
       <find>position-level</find>
@@ -91,27 +123,29 @@
       <find>Train</find>
       <find>../../dist</find>
       <find>../dist</find>
-      <find>train</find>
       <find>Trainset</find>
-      <find>trainset</find>
-      <find>forum</find>
-      <find>kbase</find>
       <find>Forum</find>
       <find>detail</find>
       <find>orange</find>
       <find>add</find>
-      <find>arms</find>
       <find>edi</find>
       <find>edit</find>
       <find>.jpg</find>
       <find>.png</find>
+      <find>unit</find>
+      <find>Unit</find>
+      <find>arms</find>
+      <find>comment</find>
+      <find>`</find>
+      <find>forum</find>
+      <find>trainset</find>
+      <find>branch</find>
+      <find>kbase</find>
+      <find>train</find>
+      <find>dist/</find>
+      <find>.jpg&quot;</find>
     </findStrings>
     <replaceStrings>
-      <replace>item_checksheet</replace>
-      <replace>top_item_</replace>
-      <replace>txt_top_item</replace>
-      <replace>c_top_item</replace>
-      <replace>$top_item_checksheet</replace>
       <replace>checksheet</replace>
       <replace>ItemChecksheet</replace>
       <replace>Mid</replace>
@@ -127,16 +161,21 @@
       <replace>Forum</replace>
       <replace>{{ URL::asset('theme/adminlte305/dist</replace>
       <replace>.jpg') }}</replace>
-      <replace>forum</replace>
       <replace>Kbase</replace>
-      <replace>kbase</replace>
       <replace>.png') }}</replace>
-      <replace>reward</replace>
       <replace>Reward</replace>
-      <replace>kms</replace>
-      <replace>comment</replace>
       <replace>.jpg ') }}</replace>
       <replace>.png ') }}</replace>
+      <replace>branch</replace>
+      <replace>Branch</replace>
+      <replace>kms</replace>
+      <replace>comment</replace>
+      <replace>close-thread</replace>
+      <replace>kbase</replace>
+      <replace>thread</replace>
+      <replace>reward</replace>
+      <replace>forum</replace>
+      <replace>.jpg') }}&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -145,56 +184,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/train_type/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/train_type/v_edit_js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/TrainTypeRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/train_type/v_delete_js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TrainTypeController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MidItemChecksheetController.php" />
-        <option value="$PROJECT_DIR$/resources/views/train_type/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/views/low_item_checksheet/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/mid_item_checksheet/v_edit_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/mid_item_checksheet/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/top_item_checksheet/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/top_item_checksheet/v_edit_js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/LowItemChecksheetRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/MaintenanceTypeRequest.php" />
-        <option value="$PROJECT_DIR$/app/Model/MaintenanceTypeModel.php" />
-        <option value="$PROJECT_DIR$/resources/views/maintenance_type/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/maintenance_type/datatables/v_action.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/maintenance_type/v_edit_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/maintenance_type/v_delete_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/maintenance_type/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Model/LowItemChecksheetModel.php" />
-        <option value="$PROJECT_DIR$/resources/views/low_item_checksheet/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LowItemChecksheetController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/views/train/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/forum/v_comment.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/v_sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" />
-        <option value="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/home/v_index.blade.php" />
-        <option value="$PROJECT_DIR$/.env.example" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" />
-        <option value="$PROJECT_DIR$/resources/views/login/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/BranchModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/branch/datatables/v_action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/branch/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/branch/v_edit_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/BranchRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" />
+        <option value="$PROJECT_DIR$/resources/views/branch/v_delete_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/position/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/PositionModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/position/v_add_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/PositionRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/position/v_edit_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PositionController.php" />
+        <option value="$PROJECT_DIR$/resources/views/position/v_delete_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/v_add_js.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/UsersModel.php" />
-        <option value="$PROJECT_DIR$/app/Model/RoleModel.php" />
-        <option value="$PROJECT_DIR$/app/Model/PermissionModel.php" />
-        <option value="$PROJECT_DIR$/app/Model/RolePermissionModel.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/ForumRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/CommentModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/branch/v_add_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forum/v_close_thread_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/KbaseRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/custom/add.js" />
+        <option value="$PROJECT_DIR$/public/js/custom/edit.js" />
         <option value="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/KbaseModel.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/kbase/v_detail_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forum/v_content_js.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" />
+        <option value="$PROJECT_DIR$/public/js/custom/delete.js" />
+        <option value="$PROJECT_DIR$/app/Model/ForumModel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" />
         <option value="$PROJECT_DIR$/resources/views/reward/v_index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/RewardModel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" />
+        <option value="$PROJECT_DIR$/resources/views/dashboard/v_index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/v_base.blade.php" />
       </list>
     </option>
@@ -328,6 +367,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,39 +383,7 @@
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
               <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
@@ -387,6 +395,20 @@
               <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="branch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
@@ -400,36 +422,7 @@
               <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="permission" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="permission" type="462c0819:PsiDirectoryNode" />
-              <item name="datatables" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
@@ -441,20 +434,12 @@
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
               <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,18 +498,19 @@
       <workItem from="1608191826061" duration="15512000" />
       <workItem from="1608384560866" duration="77000" />
       <workItem from="1608384644156" duration="6046000" />
-      <workItem from="1609915615959" duration="4932000" />
+      <workItem from="1609915615959" duration="6109000" />
+      <workItem from="1610174707251" duration="17626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198847000" />
+    <option name="totallyTimeSpent" value="217650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1680" height="965" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26007327" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26312578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -539,7 +525,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20184544" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20184544" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -550,272 +536,373 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/MaintenanceTypeRequest.php" />
-    <entry file="file://$PROJECT_DIR$/app/Model/TrainTypeModel.php" />
-    <entry file="file://$PROJECT_DIR$/app/Model/MaintenanceTypeModel.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/train_type/v_index.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/train_type/datatables/v_action.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/maintenance_type/datatables/v_action.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/train_type/v_add_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/train_type/v_edit_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/train_type/v_delete_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/maintenance_type/v_delete_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/maintenance_type/v_edit_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/maintenance_type/v_add_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/maintenance_type/v_index.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MaintenanceTypeController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/low_item_checksheet/v_index.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Model/LowItemChecksheetModel.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LowItemChecksheetController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/low_item_checksheet/v_add_js.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/position/v_edit_js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/users/v_add_js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="38" selection-end-line="1" selection-end-column="172" />
+        <state relative-caret-position="390">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_sidebar.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/UsersRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="51" column="82" selection-start-line="51" selection-start-column="82" selection-end-line="51" selection-end-column="82" />
+        <state relative-caret-position="765">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/KbaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="5" lean-forward="true" selection-end-line="167" selection-end-column="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/v_edit_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/forum/v_comment.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="66" column="92" selection-start-line="66" selection-start-column="92" selection-end-line="66" selection-end-column="92" />
+        <state relative-caret-position="-1819">
+          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/UsersModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="42" column="94" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Support/Renderable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="888" column="13" selection-start-line="888" selection-start-column="13" selection-end-line="888" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/branch/v_add_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/branch/v_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="46" column="94" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_close_thread_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="69" selection-start-line="69" selection-end-line="74" selection-end-column="9" />
           <folding>
-            <element signature="e#15819#15826#1#HTML" expanded="true" />
-            <element signature="e#17159#17166#1#HTML" expanded="true" />
-            <element signature="e#18610#18617#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RewardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/login/v_index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/UserSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/UserPermission.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/LoginRequest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/BranchRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/RoleModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/PermissionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/RolePermissionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/v_index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/custom/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="77" column="1" lean-forward="true" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/permission/datatables/v_action.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="145" selection-start-line="1" selection-start-column="124" selection-end-line="1" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/UsersModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="98" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="89" column="49" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
-          <folding>
-            <element signature="e#7#44#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="6" lean-forward="true" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/users/v_add_js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="84" column="9" lean-forward="true" selection-start-line="79" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/permission/v_index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="42" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ForumRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/custom/detail.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/custom/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="56" column="10" lean-forward="true" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/v_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="9" lean-forward="true" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/KbaseRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/datatables/v_action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="174" lean-forward="true" selection-end-column="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="52" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="85" selection-start-column="85" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="10" selection-end-line="51" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/KbaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_detail_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="177" selection-start-line="17" selection-start-column="177" selection-end-line="17" selection-end-column="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kbase/v_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="129" column="46" selection-start-line="129" selection-start-column="46" selection-end-line="129" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/branch/datatables/v_action.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="159" lean-forward="true" selection-start-line="1" selection-start-column="143" selection-end-line="1" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/v_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="237" column="27" lean-forward="true" selection-start-line="208" selection-start-column="4" selection-end-line="237" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/forum/v_index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="62" column="95" selection-start-line="62" selection-start-column="95" selection-end-line="62" selection-end-column="95" />
-          <folding>
-            <element signature="e#10642#10649#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="524">
+          <caret line="197" column="83" selection-start-line="197" selection-start-column="83" selection-end-line="197" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="120" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/custom/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="139" column="20" lean-forward="true" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/custom/delete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="141" column="34" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_content_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="134" selection-start-line="12" selection-start-column="134" selection-end-line="12" selection-end-column="134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ForumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+        <state relative-caret-position="345">
+          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
           <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#40#67#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RewardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reward/v_index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
+        <state relative-caret-position="300">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/KbaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/BranchModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/CommentModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/ForumModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="33" column="76" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="76" />
+          <folding>
+            <element signature="e#29#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/RewardModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <element signature="e#29#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dashboard/v_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <element signature="e#7#49#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_base.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="338">
+          <caret line="33" column="106" lean-forward="true" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
         </state>
       </provider>
     </entry>

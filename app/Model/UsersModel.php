@@ -53,6 +53,8 @@ class UsersModel extends Model
     public static function detailUser($username){
         return UsersModel::where('c_users_id', $username)
             ->leftJoin('t_kms_role', 't_kms_users.c_users_role', '=', 't_kms_role.c_role_id' )
+            ->leftJoin('t_kms_position', 't_kms_users.c_users_position', '=', 't_kms_position.c_position_id' )
+            ->leftJoin('t_kms_branch', 't_kms_position.c_position_branch', '=', 't_kms_branch.c_branch_id' )
             ->first();
     }
 
