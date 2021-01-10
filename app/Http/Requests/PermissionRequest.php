@@ -27,13 +27,13 @@ class PermissionRequest extends FormRequest
         switch(Route::currentRouteName()) {
             case 'permission.store':
                 return [
-                    'txt_permission_name' => 'required|min:2|unique:t_arms_permission,c_permission_name',
+                    'txt_permission_name' => 'required|min:2|unique:t_kms_permission,c_permission_name',
                     'txt_permission_display' => 'required|min:2',
                     'txt_permission_description' => 'required',
                 ];
             case 'permission.update':
                 return [
-                    'txt_permission_name' => 'required|min:2|unique:t_arms_permission,c_permission_name,'.$this->get('txt_permission_id').',c_permission_id',
+                    'txt_permission_name' => 'required|min:2|unique:t_kms_permission,c_permission_name,'.$this->get('txt_permission_id').',c_permission_id',
                     'txt_permission_display' => 'required|min:2',
                     'txt_permission_description' => 'required',
                 ];

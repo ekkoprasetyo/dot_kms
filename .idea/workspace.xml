@@ -2,81 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee67eb5-8a9a-4958-a73c-03fed81ac140" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PositionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/BranchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/ForumRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/KbaseRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PositionRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/BranchModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/CommentModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/ForumModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/KbaseModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/PositionModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/RewardModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/v_index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/forum/v_close_thread_js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/forum/v_content_js.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/kbase/v_detail_js.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KbaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RewardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/UsersRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/UsersModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/browserconfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-114.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-310.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon-96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon/faviconit-instructions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/edit-role-permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit-role-permission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/edit-user-password.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit-user-password.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/datatables/v_action.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_add_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_comment.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_comment_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_delete_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_edit_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forum/v_index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/v_index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/datatables/v_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_add_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_delete_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_edit_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kbase/v_index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/v_admin_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/v_base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/v_base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reward/datatables/v_action.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reward/v_comment.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reward/v_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reward/v_index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/v_add_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/v_add_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/v_detail_js.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PermissionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PermissionRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,29 +16,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-              <folding>
-                <element signature="e#7#49#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_base.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="33" column="106" lean-forward="true" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -134,7 +40,6 @@
       <find>.png</find>
       <find>unit</find>
       <find>Unit</find>
-      <find>arms</find>
       <find>comment</find>
       <find>`</find>
       <find>forum</find>
@@ -144,6 +49,7 @@
       <find>train</find>
       <find>dist/</find>
       <find>.jpg&quot;</find>
+      <find>arms</find>
     </findStrings>
     <replaceStrings>
       <replace>checksheet</replace>
@@ -168,7 +74,6 @@
       <replace>.png ') }}</replace>
       <replace>branch</replace>
       <replace>Branch</replace>
-      <replace>kms</replace>
       <replace>comment</replace>
       <replace>close-thread</replace>
       <replace>kbase</replace>
@@ -176,6 +81,7 @@
       <replace>reward</replace>
       <replace>forum</replace>
       <replace>.jpg') }}&quot;</replace>
+      <replace>kms</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -383,53 +289,8 @@
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
               <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="branch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dot-kms" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="reward" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dot-kms" type="b2602c69:ProjectViewProjectNode" />
@@ -499,18 +360,17 @@
       <workItem from="1608384560866" duration="77000" />
       <workItem from="1608384644156" duration="6046000" />
       <workItem from="1609915615959" duration="6109000" />
-      <workItem from="1610174707251" duration="17626000" />
+      <workItem from="1610174707251" duration="19023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217650000" />
+    <option name="totallyTimeSpent" value="219047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1680" height="965" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26312578" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26312578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -525,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20184544" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20184544" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -536,13 +396,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/position/v_edit_js.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/users/v_add_js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -889,20 +742,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="288">
+          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
           <folding>
             <element signature="e#7#49#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/v_base.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Model/PermissionModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="33" column="106" lean-forward="true" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+        <state relative-caret-position="465">
+          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
         </state>
       </provider>
     </entry>

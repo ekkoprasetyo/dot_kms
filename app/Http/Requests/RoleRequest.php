@@ -27,13 +27,13 @@ class RoleRequest extends FormRequest
         switch(Route::currentRouteName()) {
             case 'role.store':
                 return [
-                    'txt_role_name' => 'required|min:2|unique:t_arms_role,c_role_name',
+                    'txt_role_name' => 'required|min:2|unique:t_kms_role,c_role_name',
                     'txt_role_display' => 'required|min:2',
                     'txt_role_description' => 'required',
                 ];
             case 'role.update':
                 return [
-                    'txt_role_name' => 'required|min:2|unique:t_arms_role,c_role_name,'.$this->get('txt_role_id').',c_role_id',
+                    'txt_role_name' => 'required|min:2|unique:t_kms_role,c_role_name,'.$this->get('txt_role_id').',c_role_id',
                     'txt_role_display' => 'required|min:2',
                     'txt_role_description' => 'required',
                 ];
