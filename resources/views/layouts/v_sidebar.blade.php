@@ -71,6 +71,14 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('chat') }}" class="nav-link {{ str_is('chat*', Route::currentRouteName()) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-comments"></i>
+                    <p>
+                        Chat
+                    </p>
+                </a>
+            </li>
             @include('layouts.v_admin_sidebar')
         </ul>
     </nav>

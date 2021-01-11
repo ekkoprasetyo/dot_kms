@@ -13,7 +13,7 @@ use App\Http\Controllers\KnowledgeDocumentController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\RewardController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\ChatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -150,5 +150,11 @@ Route::group(['middleware' => ['user.session']], function () {
         Route::patch('/knowledge-document/destroy', [KnowledgeDocumentController::class, 'destroy'])->name('knowledge-document.destroy');
         Route::post('/knowledge-document/upload', [KnowledgeDocumentController::class, 'upload'])->name('knowledge-document.upload');
         Route::post('/knowledge-document/check-document', [KnowledgeDocumentController::class, 'check_document'])->name('knowledge-document.check-document');
+
+        //Route Chat
+        Route::get('/chat', [ChatController::class, 'index'])->name('chat');
+        Route::post('/chat/recent-chat',[ChatController::class, 'recent_chat'])->name('chat.recent-chat');//JSON Request
+        Route::post('/chat/direct-chat', [ChatController::class, 'direct_chat'])->name('chat.direct-chat');
+        Route::post('/chat/store', [ChatController::class, 'store'])->name('chat.store');
     });
 });

@@ -246,7 +246,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         //User Auth
-        'UserAuth' => App\Helpers\UserAuthorization::class,
+        'UserAuthorization' => App\Helpers\UserAuthorization::class,
 
         //Datatables
         'DataTables' => Yajra\DataTables\DataTablesServiceProvider::class,
