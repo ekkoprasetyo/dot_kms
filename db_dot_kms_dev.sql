@@ -11,7 +11,7 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 10/01/2021 08:23:56
+ Date: 11/01/2021 19:37:34
 */
 
 SET NAMES utf8mb4;
@@ -38,6 +38,32 @@ BEGIN;
 INSERT INTO `t_kms_branch` VALUES (1, 'RSP', 'RS Pusat', '1', '2021-01-09 07:03:16', 0);
 INSERT INTO `t_kms_branch` VALUES (2, 'RSB', 'RS Bandung', '1', '2021-01-09 07:03:22', 0);
 INSERT INTO `t_kms_branch` VALUES (3, 'RSJB', 'RS Jakarta Barat', '1', '2021-01-09 07:03:37', 0);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for t_kms_chat
+-- ----------------------------
+DROP TABLE IF EXISTS `t_kms_chat`;
+CREATE TABLE `t_kms_chat` (
+  `c_chat_id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_chat_from` varchar(5) NOT NULL,
+  `c_chat_to` varchar(255) NOT NULL,
+  `c_chat_chat` varchar(40) NOT NULL,
+  `c_chat_datetime` datetime NOT NULL,
+  PRIMARY KEY (`c_chat_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of t_kms_chat
+-- ----------------------------
+BEGIN;
+INSERT INTO `t_kms_chat` VALUES (1, '1', '2', 'hai gaes ..', '2021-01-11 06:52:14');
+INSERT INTO `t_kms_chat` VALUES (2, '1', '2', 'oy ..', '2021-01-11 06:55:28');
+INSERT INTO `t_kms_chat` VALUES (3, '1', '2', 'hehe', '2021-01-11 06:55:44');
+INSERT INTO `t_kms_chat` VALUES (4, '1', '2', 'hehe', '2021-01-11 06:56:47');
+INSERT INTO `t_kms_chat` VALUES (5, '1', '2', 'gan', '2021-01-11 06:59:36');
+INSERT INTO `t_kms_chat` VALUES (6, '1', '2', 'hehe', '2021-01-11 07:02:57');
+INSERT INTO `t_kms_chat` VALUES (7, '2', '1', 'hae gaes ..', '2021-01-11 07:19:11');
 COMMIT;
 
 -- ----------------------------
@@ -76,41 +102,64 @@ CREATE TABLE `t_kms_forum` (
   `c_forum_update_time` datetime NOT NULL,
   `c_forum_softdelete` int(11) NOT NULL,
   PRIMARY KEY (`c_forum_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of t_kms_forum
 -- ----------------------------
 BEGIN;
 INSERT INTO `t_kms_forum` VALUES (1, 'bagaimana jika kepala terbentur sesuatu ?', 'Head', 2, '1', '2021-01-09 07:30:18', 0);
-INSERT INTO `t_kms_forum` VALUES (2, 'bagaimana cara mengobati sariawan ?', 'Head', 1, '1', '2021-01-10 00:57:26', 0);
+INSERT INTO `t_kms_forum` VALUES (2, 'bagaimana cara mengobati sariawan ?', 'Head', 2, '1', '2021-01-10 00:57:26', 0);
 INSERT INTO `t_kms_forum` VALUES (3, 'bagaimana jika badan terkena pukul ?', 'Body', 2, '1', '2021-01-09 08:21:54', 0);
 INSERT INTO `t_kms_forum` VALUES (4, 'bagaimana jika kaki keseleo ?', 'Torso', 2, '2', '2021-01-09 13:33:03', 0);
 INSERT INTO `t_kms_forum` VALUES (5, 'bagaimana jika tangan salah urat ?', 'Body', 2, '2', '2021-01-09 13:40:33', 0);
+INSERT INTO `t_kms_forum` VALUES (6, 'Kepala suka pusing ..', 'Head', 1, '1', '2021-01-11 03:09:27', 0);
 COMMIT;
 
 -- ----------------------------
--- Table structure for t_kms_kbase
+-- Table structure for t_kms_knowledge_base
 -- ----------------------------
-DROP TABLE IF EXISTS `t_kms_kbase`;
-CREATE TABLE `t_kms_kbase` (
-  `c_kbase_id` int(11) NOT NULL AUTO_INCREMENT,
-  `c_kbase_title` varchar(50) NOT NULL,
-  `c_kbase_content` varchar(2000) NOT NULL,
-  `c_kbase_tags` varchar(100) NOT NULL,
-  `c_kbase_update_by` varchar(10) NOT NULL,
-  `c_kbase_update_time` datetime NOT NULL,
-  `c_kbase_softdelete` int(11) NOT NULL,
-  PRIMARY KEY (`c_kbase_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `t_kms_knowledge_base`;
+CREATE TABLE `t_kms_knowledge_base` (
+  `c_knowledge_base_id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_knowledge_base_title` varchar(50) NOT NULL,
+  `c_knowledge_base_content` varchar(2000) NOT NULL,
+  `c_knowledge_base_tags` varchar(100) NOT NULL,
+  `c_knowledge_base_update_by` varchar(10) NOT NULL,
+  `c_knowledge_base_update_time` datetime NOT NULL,
+  `c_knowledge_base_softdelete` int(11) NOT NULL,
+  PRIMARY KEY (`c_knowledge_base_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of t_kms_kbase
+-- Records of t_kms_knowledge_base
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_kms_kbase` VALUES (1, 'Test Title', '<p>Content</p>', 'Head', '1', '2021-01-09 14:12:50', 0);
-INSERT INTO `t_kms_kbase` VALUES (2, 'Tangan Salah Urat', '<p>Content</p>', 'Body', '1', '2021-01-09 14:05:27', 0);
-INSERT INTO `t_kms_kbase` VALUES (3, 'Jika kaki keseleo', '<p>Content</p>', 'Torso', '2', '2021-01-10 01:14:07', 0);
+INSERT INTO `t_kms_knowledge_base` VALUES (1, 'Test Title', '<p>Content</p>', 'Head', '1', '2021-01-09 14:12:50', 0);
+INSERT INTO `t_kms_knowledge_base` VALUES (2, 'Tangan Salah Urat', '<p>Content</p>', 'Body', '1', '2021-01-09 14:05:27', 0);
+INSERT INTO `t_kms_knowledge_base` VALUES (3, 'Jika kaki keseleo', '<p>Content</p>', 'Torso', '2', '2021-01-10 01:14:07', 0);
+INSERT INTO `t_kms_knowledge_base` VALUES (4, 'Pengobatan Sariawan', '<p>Contents</p>', 'Head', '1', '2021-01-11 04:03:37', 0);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for t_kms_knowledge_document
+-- ----------------------------
+DROP TABLE IF EXISTS `t_kms_knowledge_document`;
+CREATE TABLE `t_kms_knowledge_document` (
+  `c_knowledge_document_id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_knowledge_document_title` varchar(50) NOT NULL,
+  `c_knowledge_document_document` varchar(2000) NOT NULL,
+  `c_knowledge_document_tags` varchar(100) NOT NULL,
+  `c_knowledge_document_update_by` varchar(10) NOT NULL,
+  `c_knowledge_document_update_time` datetime NOT NULL,
+  `c_knowledge_document_softdelete` int(11) NOT NULL,
+  PRIMARY KEY (`c_knowledge_document_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of t_kms_knowledge_document
+-- ----------------------------
+BEGIN;
 COMMIT;
 
 -- ----------------------------
@@ -126,12 +175,20 @@ CREATE TABLE `t_kms_permission` (
   `c_permission_update_time` datetime NOT NULL,
   `c_permission_softdelete` int(11) NOT NULL,
   PRIMARY KEY (`c_permission_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of t_kms_permission
 -- ----------------------------
 BEGIN;
+INSERT INTO `t_kms_permission` VALUES (1, 'dashboard', 'Index Dashboard', 'Access to Index Dashboard', '2', '2021-01-10 01:50:13', 0);
+INSERT INTO `t_kms_permission` VALUES (2, 'kbase', 'Index Kbase', 'Access to Index Kbase', '2', '2021-01-10 01:50:23', 0);
+INSERT INTO `t_kms_permission` VALUES (3, 'forum', 'Index Forum', 'Access to Index Forum', '2', '2021-01-10 01:50:29', 0);
+INSERT INTO `t_kms_permission` VALUES (4, 'reward', 'Index Reward', 'Access to Index Reward', '2', '2021-01-10 01:50:35', 0);
+INSERT INTO `t_kms_permission` VALUES (5, 'users', 'Index Users', 'Access to Index Users', '2', '2021-01-10 01:51:14', 0);
+INSERT INTO `t_kms_permission` VALUES (6, 'role', 'Index Role', 'Access to Index Role', '2', '2021-01-10 01:51:09', 0);
+INSERT INTO `t_kms_permission` VALUES (7, 'branch', 'Index Branch', 'Access to Index Branch', '2', '2021-01-10 01:50:57', 0);
+INSERT INTO `t_kms_permission` VALUES (8, 'position', 'Index Position', 'Access to Index Position', '2', '2021-01-10 01:51:04', 0);
 COMMIT;
 
 -- ----------------------------
@@ -173,7 +230,7 @@ CREATE TABLE `t_kms_reward` (
   `c_reward_update_time` datetime NOT NULL,
   `c_reward_softdelete` int(11) NOT NULL,
   PRIMARY KEY (`c_reward_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of t_kms_reward
@@ -182,6 +239,7 @@ BEGIN;
 INSERT INTO `t_kms_reward` VALUES (1, 1, 1, 1, '1', '2021-01-09 12:47:28', 0);
 INSERT INTO `t_kms_reward` VALUES (2, 5, 1, 2, '1', '2021-01-09 14:05:27', 0);
 INSERT INTO `t_kms_reward` VALUES (3, 4, 1, 2, '2', '2021-01-10 01:14:07', 0);
+INSERT INTO `t_kms_reward` VALUES (4, 2, 1, 1, '1', '2021-01-11 03:07:10', 0);
 COMMIT;
 
 -- ----------------------------
@@ -247,8 +305,8 @@ CREATE TABLE `t_kms_users` (
 -- Records of t_kms_users
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_kms_users` VALUES (1, '11111', 'Eko Prasetyo', 'ekkoprasetyo@gmail.com', '$2y$10$l1MW5VuYKqQUCpGnPH.Nj.duvoltPuexhbTagBGkRFMHQPmO9v5Gi', '2', '1', '1', '1', '2020-12-10 07:07:35', '127.0.0.1', '2021-01-10 00:42:51', 0);
-INSERT INTO `t_kms_users` VALUES (2, '12345', 'Christiano Ronaldo', 'christiano.ronaldo@gmail.com', '$2y$10$5xElodeyczJStZ.qc/9rgu4I.SI13P7XSlbYxB.sqGldVaIvHzOGK', '3', '2', '1', '1', '2021-01-09 11:50:33', '127.0.0.1', '2021-01-10 01:21:42', 0);
+INSERT INTO `t_kms_users` VALUES (1, '11111', 'Eko Prasetyo', 'ekkoprasetyo@gmail.com', '$2y$10$l1MW5VuYKqQUCpGnPH.Nj.duvoltPuexhbTagBGkRFMHQPmO9v5Gi', '2', '1', '1', '1', '2020-12-10 07:07:35', '127.0.0.1', '2021-01-11 03:17:53', 0);
+INSERT INTO `t_kms_users` VALUES (2, '12345', 'Christiano Ronaldo', 'christiano.ronaldo@gmail.com', '$2y$10$5xElodeyczJStZ.qc/9rgu4I.SI13P7XSlbYxB.sqGldVaIvHzOGK', '3', '2', '1', '1', '2021-01-09 11:50:33', '127.0.0.1', '2021-01-11 07:18:53', 0);
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
