@@ -69,7 +69,7 @@
                         <!-- small box -->
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>{{ $count_total_kbase }}</h3>
+                                <h3>{{ $count_total_knowledge_base }}</h3>
 
                                 <p>Total K-Base Record</p>
                             </div>

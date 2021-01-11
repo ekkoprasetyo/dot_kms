@@ -1,0 +1,3 @@
+<button type="button" onclick="detailModal('{{ $knowledge_base->c_knowledge_base_id }}','{{route('knowledge-base.detail')}}')" class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></button>
+<button type="button" onclick="editModal('{{ $knowledge_base->c_knowledge_base_id }}','{{ route('knowledge-base.edit') }}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $knowledge_base->c_knowledge_base_id }}','{{ route('knowledge-base.delete') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>

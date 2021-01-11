@@ -1,0 +1,3 @@
+<button type="button" onclick="detailModal('{{ $knowledge_document->c_knowledge_document_id }}','{{route('knowledge-document.detail')}}')" class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></button>
+<button type="button" onclick="editModal('{{ $knowledge_document->c_knowledge_document_id }}','{{ route('knowledge-document.edit') }}')" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i></button>
+<button type="button" onclick="deleteModal('{{ $knowledge_document->c_knowledge_document_id }}','{{ route('knowledge-document.delete') }}')" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>

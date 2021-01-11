@@ -164,7 +164,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form class="form-horizontal" method="post" action="{{ route('kbase.store-forum') }}" id="form-close-thread">
+                <form class="form-horizontal" method="post" action="{{ route('knowledge-base.store-forum') }}" id="form-close-thread">
                     <div class="modal-body">
                         <div id="form-close-thread-js"></div>
                     </div>

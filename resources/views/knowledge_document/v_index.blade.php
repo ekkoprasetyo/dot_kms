@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 <!-- summernote -->
 <link rel="stylesheet" href="{{ URL::asset('theme/adminlte305/plugins/summernote/summernote-bs4.css') }}">
+<!-- dropzone -->
+<link rel="stylesheet" href="{{ URL::asset('js/dropzone/dist/dropzone.css') }}">
 @endsection
 
 @section('content')
@@ -39,7 +41,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a type="button" onclick="addModal('{{ route('kbase.add') }}')" class="btn btn-app">
+                            <a type="button" onclick="addModal('{{ route('knowledge-document.add') }}')" class="btn btn-app">
                                 <span class="badge bg-success">Insert</span>
                                 <i class="fa fa-plus"></i> Add
                             </a>
@@ -51,7 +53,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Tag</th>
-                                    <th>Case</th>
+                                    <th>Title</th>
                                     <th>Publisher</th>
                                     <th>Publish Date</th>
                                     <th>Action</th>
@@ -63,7 +65,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Tag</th>
-                                    <th>Case</th>
+                                    <th>Title</th>
                                     <th>Publisher</th>
                                     <th>Publish Date</th>
                                     <th>Action</th>
@@ -94,9 +96,9 @@
                     <i class="fas fa-2x fa-sync fa-spin"></i>
                 </div>
             </div>
-            <form class="form-horizontal" method="post" action="{{ route('kbase') }}" id="form-add">
+            <form class="form-horizontal" method="post" action="{{ route('knowledge-document.store') }}" id="form-add">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Knowledge Base</h4>
+                    <h4 class="modal-title">Add Knowledge Document</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -126,7 +128,7 @@
                 </div>
             </div>
             <div class="modal-header">
-                <h4 class="modal-title">Detail Knowledge Base</h4>
+                <h4 class="modal-title">Detail Knowledge Document</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -154,12 +156,12 @@
                 </div>
             </div>
             <div class="modal-header">
-                <h4 class="modal-title">Edit Knowledge Base</h4>
+                <h4 class="modal-title">Edit Knowledge Document</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="form-horizontal" method="post" action="{{ route('kbase.update') }}" id="form-edit">
+            <form class="form-horizontal" method="post" action="{{ route('knowledge-document.update') }}" id="form-edit">
                 <div class="modal-body">
                     <div id="form-edit-js"></div>
                 </div>
@@ -185,12 +187,12 @@
                 </div>
             </div>
             <div class="modal-header">
-                <h4 class="modal-title">Delete Knowledge Base</h4>
+                <h4 class="modal-title">Delete Knowledge Document</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form class="form-horizontal" method="post" action="{{ route('kbase.destroy') }}" id="form-delete">
+            <form class="form-horizontal" method="post" action="{{ route('knowledge-document.destroy') }}" id="form-delete">
                 <div class="modal-body">
                     <div id="form-delete-js"></div>
                 </div>
@@ -224,6 +226,8 @@
 <script src="{{ URL::asset('js/custom/edit.js') }}"></script>
 <script src="{{ URL::asset('js/custom/delete.js') }}"></script>
 <script src="{{ URL::asset('js/custom/detail.js') }}"></script>
+<script src="{{ URL::asset('js/dropzone/dist/dropzone.js') }}"></script>
+<script src="{{ URL::asset('js/pdfobject/pdfobject.min.js') }}"></script>
 
 <script type="text/javascript">
     $.ajaxSetup({
@@ -242,15 +246,15 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: '{{ route('kbase.datatables') }}',
+                url: '{{ route('knowledge-document.datatables') }}',
                 method: 'POST'
             },
             columns: [
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
-                {data: 'c_kbase_tags', name: 'c_kbase_tags', "className": "text-center"},
-                {data: 'c_kbase_title', name: 'c_kbase_title', "className": "text-center"},
+                {data: 'c_knowledge_document_tags', name: 'c_knowledge_document_tags', "className": "text-center"},
+                {data: 'c_knowledge_document_title', name: 'c_knowledge_document_title', "className": "text-center"},
                 {data: 'c_users_fullname', name: 'c_users_fullname', "className": "text-center"},
-                {data: 'c_kbase_update_time', name: 'c_kbase_update_time', "className": "text-center"},
+                {data: 'c_knowledge_document_update_time', name: 'c_knowledge_document_update_time', "className": "text-center"},
                 {data: 'action', name: 'action', orderable: false, searchable: false, "className": "text-center", width: '150px'}
             ],
         });

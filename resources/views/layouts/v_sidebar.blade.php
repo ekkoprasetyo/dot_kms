@@ -3,7 +3,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="{{ URL::asset('theme/adminlte305/dist/img/user2-160x160.jpg' ) }}" class="img-circle elevation-2" alt="ARMS">
+            <img src="{{ URL::asset('theme/adminlte305/dist/img/user2-160x160.jpg' ) }}" class="img-circle elevation-2" alt="KMS">
         </div>
         <div class="info">
             <a href="#" class="d-block">{{ Session::get('users_fullname') }}</a>
@@ -32,13 +32,28 @@
                 </a>
             </li>
             <li class="nav-header">DATA</li>
-            <li class="nav-item">
-                <a href="{{ route('kbase') }}" class="nav-link {{ str_is('kbase*', Route::currentRouteName()) ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-book"></i>
+            <li class="nav-item has-treeview {{ str_is('knowledge-base*', Route::currentRouteName()) || str_is('knowledge-document*', Route::currentRouteName()) ? 'menu-open' : '' }}">
+                <a href="#" class="nav-link {{ str_is('knowledge-base*', Route::currentRouteName()) || str_is('knowledge-document*', Route::currentRouteName()) ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-user-cog"></i>
                     <p>
-                        Knowledge-Base
+                        Knowledge
+                        <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('knowledge-base') }}" class="nav-link {{ str_is('knowledge-base*', Route::currentRouteName()) ? 'active' : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Base</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('knowledge-document') }}" class="nav-link {{ str_is('knowledge-document*', Route::currentRouteName()) ? 'active' : '' }}">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Document</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="{{ route('forum') }}" class="nav-link {{ str_is('forum*', Route::currentRouteName()) ? 'active' : '' }}">

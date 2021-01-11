@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Route;
 
-class KbaseRequest extends FormRequest
+class KnowledgeBaseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,17 +25,17 @@ class KbaseRequest extends FormRequest
     public function rules()
     {
         switch(Route::currentRouteName()) {
-            case 'kbase.store':
+            case 'knowledge-base.store':
                 return [
-                    'txt_kbase_title' => 'required',
-                    'txt_kbase_content' => 'required',
-                    'txt_kbase_tags' => 'required',
+                    'txt_knowledge_base_title' => 'required',
+                    'txt_knowledge_base_content' => 'required',
+                    'txt_knowledge_base_tags' => 'required',
                 ];
-            case 'kbase.update':
+            case 'knowledge-base.update':
                 return [
-                    'txt_kbase_title' => 'required',
-                    'txt_kbase_content' => 'required',
-                    'txt_kbase_tags' => 'required',
+                    'txt_knowledge_base_title' => 'required',
+                    'txt_knowledge_base_content' => 'required',
+                    'txt_knowledge_base_tags' => 'required',
                 ];
             default:break;
         }
@@ -43,9 +43,9 @@ class KbaseRequest extends FormRequest
 
     public function attributes() {
         return [
-            'txt_kbase_title' => 'Title',
-            'txt_kbase_content' => 'Content',
-            'txt_kbase_tags' => 'Tags',
+            'txt_knowledge_base_title' => 'Title',
+            'txt_knowledge_base_content' => 'Content',
+            'txt_knowledge_base_tags' => 'Tags',
         ];
     }
 }

@@ -8,7 +8,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PermissionController;
-use App\Http\Controllers\KbaseController;
+use App\Http\Controllers\KnowledgeBaseController;
+use App\Http\Controllers\KnowledgeDocumentController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\RewardController;
 use App\Http\Controllers\DashboardController;
@@ -124,17 +125,30 @@ Route::group(['middleware' => ['user.session']], function () {
         Route::post('/reward/delete', [RewardController::class, 'delete'])->name('reward.delete');
         Route::patch('/reward/destroy', [RewardController::class, 'destroy'])->name('reward.destroy');
 
-        //Route Kbase
-        Route::get('/kbase', [KbaseController::class, 'index'])->name('kbase');
-        Route::post('/kbase/datatables',[KbaseController::class, 'datatables'])->name('kbase.datatables');//JSON Request
-        Route::post('/kbase/detail',[KbaseController::class, 'detail'])->name('kbase.detail');
-        Route::post('/kbase/add', [KbaseController::class, 'add'])->name('kbase.add');
-        Route::post('/kbase/store', [KbaseController::class, 'store'])->name('kbase.store');
-        Route::post('/kbase/store-forum', [KbaseController::class, 'store_forum'])->name('kbase.store-forum');
-        Route::post('/kbase/edit', [KbaseController::class, 'edit'])->name('kbase.edit');
-        Route::patch('/kbase/update', [KbaseController::class, 'update'])->name('kbase.update');
-        Route::post('/kbase/delete', [KbaseController::class, 'delete'])->name('kbase.delete');
-        Route::patch('/kbase/destroy', [KbaseController::class, 'destroy'])->name('kbase.destroy');
-        
+        //Route Knowledge Base
+        Route::get('/knowledge-base', [KnowledgeBaseController::class, 'index'])->name('knowledge-base');
+        Route::post('/knowledge-base/datatables',[KnowledgeBaseController::class, 'datatables'])->name('knowledge-base.datatables');//JSON Request
+        Route::post('/knowledge-base/detail',[KnowledgeBaseController::class, 'detail'])->name('knowledge-base.detail');
+        Route::post('/knowledge-base/add', [KnowledgeBaseController::class, 'add'])->name('knowledge-base.add');
+        Route::post('/knowledge-base/store', [KnowledgeBaseController::class, 'store'])->name('knowledge-base.store');
+        Route::post('/knowledge-base/store-forum', [KnowledgeBaseController::class, 'store_forum'])->name('knowledge-base.store-forum');
+        Route::post('/knowledge-base/edit', [KnowledgeBaseController::class, 'edit'])->name('knowledge-base.edit');
+        Route::patch('/knowledge-base/update', [KnowledgeBaseController::class, 'update'])->name('knowledge-base.update');
+        Route::post('/knowledge-base/delete', [KnowledgeBaseController::class, 'delete'])->name('knowledge-base.delete');
+        Route::patch('/knowledge-base/destroy', [KnowledgeBaseController::class, 'destroy'])->name('knowledge-base.destroy');
+
+        //Route Knowledge Document
+        Route::get('/knowledge-document', [KnowledgeDocumentController::class, 'index'])->name('knowledge-document');
+        Route::post('/knowledge-document/datatables',[KnowledgeDocumentController::class, 'datatables'])->name('knowledge-document.datatables');//JSON Request
+        Route::post('/knowledge-document/detail',[KnowledgeDocumentController::class, 'detail'])->name('knowledge-document.detail');
+        Route::post('/knowledge-document/add', [KnowledgeDocumentController::class, 'add'])->name('knowledge-document.add');
+        Route::post('/knowledge-document/store', [KnowledgeDocumentController::class, 'store'])->name('knowledge-document.store');
+        Route::post('/knowledge-document/store-forum', [KnowledgeDocumentController::class, 'store_forum'])->name('knowledge-document.store-forum');
+        Route::post('/knowledge-document/edit', [KnowledgeDocumentController::class, 'edit'])->name('knowledge-document.edit');
+        Route::patch('/knowledge-document/update', [KnowledgeDocumentController::class, 'update'])->name('knowledge-document.update');
+        Route::post('/knowledge-document/delete', [KnowledgeDocumentController::class, 'delete'])->name('knowledge-document.delete');
+        Route::patch('/knowledge-document/destroy', [KnowledgeDocumentController::class, 'destroy'])->name('knowledge-document.destroy');
+        Route::post('/knowledge-document/upload', [KnowledgeDocumentController::class, 'upload'])->name('knowledge-document.upload');
+        Route::post('/knowledge-document/check-document', [KnowledgeDocumentController::class, 'check_document'])->name('knowledge-document.check-document');
     });
 });
