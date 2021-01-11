@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\ForumModel;
 use App\Model\KnowledgeBaseModel;
+use App\Model\KnowledgeDocumentModel;
 use App\Model\RewardModel;
 use App\Model\UsersModel;
 
@@ -26,9 +27,11 @@ class DashboardController extends Controller
         $count_total_case = count(ForumModel::get());
         $count_total_user = count(UsersModel::where('c_users_softdelete', 0)->get());
         $count_total_knowledge_base = count(KnowledgeBaseModel::get());
+        $count_total_knowledge_document = count(KnowledgeDocumentModel::get());
         $completion = 100-(round($count_open_case/$count_total_case*100));
         $top_points = RewardModel::topPoint();
 
-        return view('dashboard.v_index', compact('title','subtitle','count_open_case','count_total_user','completion','top_points','count_total_knowledge_base'));
+        return view('dashboard.v_index', compact('title','subtitle','count_open_case','count_total_user','completion','top_points','count_total_knowledge_base',
+            'count_total_knowledge_document'));
     }
 }
