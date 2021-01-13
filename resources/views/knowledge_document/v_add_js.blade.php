@@ -20,9 +20,22 @@
             <label class="text-danger">Only PDF can be Uploaded ..</label>
         </div>
     </div>
+    <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Share to</label>
+        <div class="col-sm-9">
+            <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;" name="txt_knowledge_document_share">
+                <option value="">-= Select =-</option>
+                <option value="Public">Public</option>
+                <option value="Professional">Professional</option>
+            </select>
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
     $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2();
+
         $('#upload-document').dropzone({
             dictDefaultMessage: "Drop file to upload ..",
             paramName: "document",

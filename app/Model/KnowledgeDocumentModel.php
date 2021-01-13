@@ -12,6 +12,7 @@ class KnowledgeDocumentModel extends Model
         'c_knowledge_document_tags',
         'c_knowledge_document_title',
         'c_knowledge_document_document',
+        'c_knowledge_document_share',
         'c_knowledge_document_update_by',
         'c_knowledge_document_update_time',
         'c_knowledge_document_softdelete',

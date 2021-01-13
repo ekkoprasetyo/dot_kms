@@ -30,12 +30,13 @@ class KnowledgeDocumentRequest extends FormRequest
                     'txt_knowledge_document_title' => 'required',
                     'txt_knowledge_document_document' => 'required',
                     'txt_knowledge_document_tags' => 'required',
+                    'txt_knowledge_document_share' => 'required',
                 ];
             case 'knowledge-document.update':
                 return [
                     'txt_knowledge_document_title' => 'required',
                     'txt_knowledge_document_document' => 'required',
-                    'txt_knowledge_document_tags' => 'required',
+                    'txt_knowledge_document_share' => 'required',
                 ];
             default:break;
         }
@@ -46,6 +47,7 @@ class KnowledgeDocumentRequest extends FormRequest
             'txt_knowledge_document_title' => 'Title',
             'txt_knowledge_document_document' => 'Document',
             'txt_knowledge_document_tags' => 'Tags',
+            'txt_knowledge_document_share' => 'Share to',
         ];
     }
 }

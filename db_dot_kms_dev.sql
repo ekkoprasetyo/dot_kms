@@ -11,7 +11,7 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 11/01/2021 19:37:34
+ Date: 13/01/2021 09:31:41
 */
 
 SET NAMES utf8mb4;
@@ -150,16 +150,18 @@ CREATE TABLE `t_kms_knowledge_document` (
   `c_knowledge_document_title` varchar(50) NOT NULL,
   `c_knowledge_document_document` varchar(2000) NOT NULL,
   `c_knowledge_document_tags` varchar(100) NOT NULL,
+  `c_knowledge_document_share` varchar(100) NOT NULL,
   `c_knowledge_document_update_by` varchar(10) NOT NULL,
   `c_knowledge_document_update_time` datetime NOT NULL,
   `c_knowledge_document_softdelete` int(11) NOT NULL,
   PRIMARY KEY (`c_knowledge_document_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of t_kms_knowledge_document
 -- ----------------------------
 BEGIN;
+INSERT INTO `t_kms_knowledge_document` VALUES (1, 'Title', 'Document_1610504822934_we8ck.pdf', 'Head', 'Public', '1', '2021-01-13 02:29:04', 0);
 COMMIT;
 
 -- ----------------------------
@@ -305,7 +307,7 @@ CREATE TABLE `t_kms_users` (
 -- Records of t_kms_users
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_kms_users` VALUES (1, '11111', 'Eko Prasetyo', 'ekkoprasetyo@gmail.com', '$2y$10$l1MW5VuYKqQUCpGnPH.Nj.duvoltPuexhbTagBGkRFMHQPmO9v5Gi', '2', '1', '1', '1', '2020-12-10 07:07:35', '127.0.0.1', '2021-01-11 03:17:53', 0);
+INSERT INTO `t_kms_users` VALUES (1, '11111', 'Eko Prasetyo', 'ekkoprasetyo@gmail.com', '$2y$10$l1MW5VuYKqQUCpGnPH.Nj.duvoltPuexhbTagBGkRFMHQPmO9v5Gi', '2', '1', '1', '1', '2020-12-10 07:07:35', '127.0.0.1', '2021-01-13 02:24:42', 0);
 INSERT INTO `t_kms_users` VALUES (2, '12345', 'Christiano Ronaldo', 'christiano.ronaldo@gmail.com', '$2y$10$5xElodeyczJStZ.qc/9rgu4I.SI13P7XSlbYxB.sqGldVaIvHzOGK', '3', '2', '1', '1', '2021-01-09 11:50:33', '127.0.0.1', '2021-01-11 07:18:53', 0);
 COMMIT;
 

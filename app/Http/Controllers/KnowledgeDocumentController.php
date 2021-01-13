@@ -63,6 +63,7 @@ class KnowledgeDocumentController extends Controller
                 'c_knowledge_document_title' => $request->txt_knowledge_document_title,
                 'c_knowledge_document_document' => $request->txt_knowledge_document_document,
                 'c_knowledge_document_tags' => $request->txt_knowledge_document_tags,
+                'c_knowledge_document_share' => $request->txt_knowledge_document_share,
                 'c_knowledge_document_update_by' => UserAuth::getUserID(),
                 'c_knowledge_document_update_time' => date('Y-m-d H:i:s'),
                 'c_knowledge_document_softdelete' => 0,
@@ -100,6 +101,7 @@ class KnowledgeDocumentController extends Controller
             $knowledge_document->c_knowledge_document_tags = $request->txt_knowledge_document_tags;
             $knowledge_document->c_knowledge_document_title = $request->txt_knowledge_document_title;
             $knowledge_document->c_knowledge_document_document = $request->txt_knowledge_document_document;
+            $knowledge_document->c_knowledge_document_share = $request->txt_knowledge_document_share;
             $knowledge_document->c_knowledge_document_update_by = UserAuth::getUserID();
             $knowledge_document->c_knowledge_document_update_time = date('Y-m-d H:i:s');
             $knowledge_document->save();
@@ -163,11 +165,11 @@ class KnowledgeDocumentController extends Controller
 
         if ($document) {
             return response()->json(['status' => 'success',
-                'message' => 'File berhasil upload ..']);
+                'message' => 'Upload file successfull ..']);
         }
         else {
             return response()->json(['status' => 'error',
-                'message' => 'File gagal upload ..']);
+                'message' => 'Upload file failed ..']);
         }
     }
 }

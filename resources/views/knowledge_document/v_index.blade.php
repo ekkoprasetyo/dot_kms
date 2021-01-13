@@ -54,6 +54,7 @@
                                     <th>No</th>
                                     <th>Tag</th>
                                     <th>Title</th>
+                                    <th>Share</th>
                                     <th>Publisher</th>
                                     <th>Publish Date</th>
                                     <th>Action</th>
@@ -66,6 +67,7 @@
                                     <th>No</th>
                                     <th>Tag</th>
                                     <th>Title</th>
+                                    <th>Share</th>
                                     <th>Publisher</th>
                                     <th>Publish Date</th>
                                     <th>Action</th>
@@ -253,6 +255,7 @@
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', "className": "text-center"},
                 {data: 'c_knowledge_document_tags', name: 'c_knowledge_document_tags', "className": "text-center"},
                 {data: 'c_knowledge_document_title', name: 'c_knowledge_document_title', "className": "text-center"},
+                {data: 'c_knowledge_document_share', name: 'c_knowledge_document_share', "className": "text-center"},
                 {data: 'c_users_fullname', name: 'c_users_fullname', "className": "text-center"},
                 {data: 'c_knowledge_document_update_time', name: 'c_knowledge_document_update_time', "className": "text-center"},
                 {data: 'action', name: 'action', orderable: false, searchable: false, "className": "text-center", width: '150px'}

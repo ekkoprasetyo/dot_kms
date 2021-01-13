@@ -247,6 +247,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         //User Auth
         'UserAuthorization' => App\Helpers\UserAuthorization::class,
+        'UserAuth' => App\Helpers\UserAuthorization::class,
 
         //Datatables
         'DataTables' => Yajra\DataTables\DataTablesServiceProvider::class,
