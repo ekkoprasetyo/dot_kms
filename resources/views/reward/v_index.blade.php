@@ -37,10 +37,11 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <a type="button" onclick="addModal('{{ route('reward.add') }}')" class="btn btn-app">
-                                    <span class="badge bg-success">Insert</span>
-                                    <i class="fa fa-plus"></i> Add
-                                </a>
+                                <h4 class="text-info">Points Benefit</h4>
+                                <ul>15 Pts - Voucher Makan Di Kantin Sebesar Rp. 25.000</ul>
+                                <ul>50 Pts - Voucher Medical Checkup Sebesar Rp. 250.000</ul>
+                                <ul>100 Pts - Voucher Medical Checkup Sebesar Rp. 500.000</ul>
+                                <h4 class="text-warning">Points dapat diclaim dengan menghubungi pihak HRD.</h4>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
