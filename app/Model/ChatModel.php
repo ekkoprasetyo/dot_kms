@@ -19,8 +19,9 @@ class ChatModel extends Model
     public $timestamps = false;
 
     public static function recentChat() {
-        return ChatModel::where('c_chat_from',UserAuthorization::getUserID())
-            ->Orwhere('c_chat_to',UserAuthorization::getUserID())
+        return ChatModel::where(function ($query){
+            $query->where('c_chat_from',UserAuthorization::getUserID());
+            })
             ->select('*', 'u1.c_users_fullname as from','u1.c_users_id as id_from','u2.c_users_fullname as to','u2.c_users_id as id_to')
             ->leftJoin('t_kms_users as u1', 't_kms_chat.c_chat_from', '=', 'u1.c_users_id' )
             ->leftJoin('t_kms_users as u2', 't_kms_chat.c_chat_to', '=', 'u2.c_users_id' )
@@ -30,10 +31,14 @@ class ChatModel extends Model
     }
 
     public static function directChat($to) {
-        return ChatModel::where('c_chat_from',UserAuthorization::getUserID())
-            ->orWhere('c_chat_to',UserAuthorization::getUserID())
-            ->orWhere('c_chat_from',$to)
-            ->orWhere('c_chat_to',$to)
+        return ChatModel::where(function ($query) use ($to){
+            $query->where('c_chat_from',UserAuthorization::getUserID())
+                ->orWhere('c_chat_to',UserAuthorization::getUserID());
+        })
+            ->where(function ($query) use ($to){
+                $query->where('c_chat_to',$to)
+                    ->orWhere('c_chat_from',$to);
+            })
             ->select('*', 'u1.c_users_fullname as from','u1.c_users_id as id_from','u2.c_users_fullname as to','u2.c_users_id as id_to')
             ->leftJoin('t_kms_users as u1', 't_kms_chat.c_chat_from', '=', 'u1.c_users_id' )
             ->leftJoin('t_kms_users as u2', 't_kms_chat.c_chat_to', '=', 'u2.c_users_id' )
